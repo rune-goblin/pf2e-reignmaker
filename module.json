@@ -1,39 +1,39 @@
 {
-    "id": "pf2e-reignmaker",
-    "title": "PF2E ReignMaker",
-    "description": "Kingdom Building management for Pathfinder 2e",
-    "version": "0.1.0",
-    "esmodules": [
-        "dist/pf2e-reignmaker.js"
-    ],
-    "styles": [
-        "dist/fonts.css",
-        "dist/pf2e-reignmaker.css"
-    ],
-    "url": "https://github.com/MarkPearce/pf2e-reignmaker-release",
-    "license": "LICENSE",
-    "manifest": "https://github.com/MarkPearce/pf2e-reignmaker-release/releases/latest/download/module.json",
-    "download": "https://github.com/MarkPearce/pf2e-reignmaker-release/releases/download/v0.1.0/release.zip",
-    "socket": true,
-    "authors": [
-        {
-            "name": "Mark Pearce & Anthropic Claude",
-            "flags": {}
-        }
-    ],
-    "relationships": {
-        "systems": [
-            {
-                "id": "pf2e",
-                "compatibility": {
-                    "minimum": "7.2.0"
-                }
-            }
-        ]
-    },
-    "compatibility": {
-        "minimum": "13",
-        "maximum": "13",
-        "verified": "13"
+  "id": "pf2e-reignmaker",
+  "title": "PF2E ReignMaker",
+  "description": "Kingdom Building management for Pathfinder 2e",
+  "version": "0.1.1",
+  "esmodules": [
+    "dist/pf2e-reignmaker.js"
+  ],
+  "styles": [
+    "dist/fonts.css",
+    "dist/pf2e-reignmaker.css"
+  ],
+  "url": "https://github.com/rune-goblin/pf2e-reignmaker",
+  "license": "LICENSE",
+  "manifest": "https://github.com/rune-goblin/pf2e-reignmaker/releases/latest/download/module.json",
+  "download": "https://github.com/rune-goblin/pf2e-reignmaker/releases/download/v0.1.1/release.zip",
+  "socket": true,
+  "authors": [
+    {
+      "name": "Mark Pearce & Anthropic Claude",
+      "flags": {}
     }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "compatibility": {
+          "minimum": "7.2.0"
+        }
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "13",
+    "maximum": "13",
+    "verified": "13"
+  }
 }
