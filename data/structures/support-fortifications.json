@@ -1,0 +1,101 @@
+{
+  "type": "support",
+  "family": "Fortifications",
+  "description": "Defensive walls and battlements",
+  "tiers": [
+    {
+      "id": "wooden-palisade",
+      "name": "Wooden Palisade",
+      "description": "Basic wooden defensive barrier",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "defenderBonus",
+          "value": {
+            "ac": 1
+          }
+        }
+      ],
+      "manualEffects": [
+        "Defending armies in this settlement gain +1 AC"
+      ]
+    },
+    {
+      "id": "stone-walls",
+      "name": "Stone Walls",
+      "description": "Solid stone defensive walls",
+      "cost": {
+        "lumber": 2,
+        "stone": 4
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "defenderBonus",
+          "value": {
+            "ac": 1,
+            "level": 1
+          }
+        }
+      ],
+      "manualEffects": [
+        "Defending armies in this settlement gain +1 AC and +1 effective level"
+      ]
+    },
+    {
+      "id": "fortified-walls",
+      "name": "Fortified Walls",
+      "description": "Heavily reinforced defensive fortifications",
+      "cost": {
+        "lumber": 2,
+        "stone": 5,
+        "ore": 5
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "defenderBonus",
+          "value": {
+            "ac": 1,
+            "level": 2
+          }
+        }
+      ],
+      "manualEffects": [
+        "Defending armies in this settlement gain +1 AC and +2 effective level"
+      ]
+    },
+    {
+      "id": "grand-battlements",
+      "name": "Grand Battlements",
+      "description": "Massive defensive structures with advanced defensive positions",
+      "cost": {
+        "lumber": 3,
+        "stone": 12,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "defenderBonus",
+          "value": {
+            "ac": 2,
+            "level": 3
+          }
+        },
+        {
+          "type": "ruleMod",
+          "rule": "defenderRecovery",
+          "value": true
+        }
+      ],
+      "manualEffects": [
+        "Defending armies in this settlement gain +2 AC and +3 effective level",
+        "Defenders located in this settlement recover each turn as long as the city has food"
+      ]
+    }
+  ]
+}

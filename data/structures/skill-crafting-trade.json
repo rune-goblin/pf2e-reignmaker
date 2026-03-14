@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Crafting & Trade",
+  "description": "Tier progression for Crafting & Trade",
+  "tiers": [
+    {
+      "id": "workshop",
+      "name": "Workshop",
+      "description": "Basic crafting workspace for artisans",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "crafting",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Crafting"
+      ]
+    },
+    {
+      "id": "artisans-hall",
+      "name": "Artisan's Hall",
+      "description": "Professional guild hall for skilled crafters",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "crafting",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Crafting, Lore"
+      ]
+    },
+    {
+      "id": "blacksmiths-guild",
+      "name": "Blacksmiths' Guild",
+      "description": "Specialized metalworking guild complex",
+      "cost": {
+        "lumber": 3,
+        "stone": 3,
+        "ore": 6
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "crafting",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Crafting, Lore, Society",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "masterworks-foundry",
+      "name": "Masterworks Foundry",
+      "description": "The pinnacle of craftsmanship, where master artisans create legendary works",
+      "cost": {
+        "lumber": 6,
+        "stone": 6,
+        "ore": 12
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "crafting",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Crafting, Lore, Society",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Alchemist, Inventor, Gunslinger"
+      ]
+    }
+  ],
+  "skills": [
+    "Crafting",
+    "Lore",
+    "Society"
+  ]
+}

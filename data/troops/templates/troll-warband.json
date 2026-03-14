@@ -1,0 +1,115 @@
+{
+  "name": "Troll Warband",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 7 },
+      "dex": { "mod": 3 },
+      "con": { "mod": 7 },
+      "int": { "mod": 0 },
+      "wis": { "mod": 3 },
+      "cha": { "mod": 3 }
+    },
+    "attributes": {
+      "ac": { "value": 26 },
+      "hp": { "max": 143, "value": 143, "details": "Thresholds 95 (12 squares), 47 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 7 },
+        { "type": "splash-damage", "value": 5 },
+        { "type": "fire", "value": 10 },
+        { "type": "acid", "value": 10 }
+      ]
+    },
+    "details": {
+      "level": { "value": 8 },
+      "publicNotes": "<p>A small but ferocious warband of trolls whose regenerative capabilities and brutal fighting style make them dangerous despite their limited numbers.</p>",
+      "languages": { "value": ["jotun"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 21 },
+      "reflex": { "value": 13 },
+      "will": { "value": 19 }
+    },
+    "perception": { "mod": 16, "senses": [{ "type": "darkvision" }] },
+    "traits": {
+      "value": ["troop", "giant", "troll"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "darkvision" },
+    { "$ref": "regeneration" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 95 (12 squares), 47 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Brutal Assault",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The Troll Warband uses the All-Out Assault action. An army damaged by this assault must succeed at a Morale check or become shaken 1 (shaken 2 on a critical failure) from the brutality of the attack.</p>" },
+        "traits": { "value": ["attack"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Frightening Foe",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The Troll Warband can use the Taunt tactical action. They gain a +2 status bonus on their Morale check if they used Regeneration this turn.</p>" },
+        "traits": { "value": ["fear", "mental"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Troll Warband",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.75,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "type": "skill",
+  "family": "Medicine & Healing",
+  "description": "Tier progression for Medicine & Healing",
+  "tiers": [
+    {
+      "id": "healers-hut",
+      "name": "Healer's Hut",
+      "description": "A humble shelter where simple remedies and divine prayers mend the wounded",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Medicine"
+      ]
+    },
+    {
+      "id": "infirmary",
+      "name": "Infirmary",
+      "description": "A modest building where trained healers provide consistent care and treatment",
+      "cost": {
+        "lumber": 2,
+        "stone": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Medicine, Lore"
+      ]
+    },
+    {
+      "id": "hospital",
+      "name": "Hospital",
+      "description": "A respected center of healing, combining skill, alchemy, and divine magic",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "arcana",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Medicine, Lore, Arcana",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "medical-college",
+      "name": "Medical Academy",
+      "description": "A grand institution where masters of medicine teach, research, and advance the healing arts",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "arcana",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Medicine, Lore, Arcana",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    }
+  ],
+  "skills": [
+    "Medicine",
+    "Lore",
+    "Arcana"
+  ]
+}

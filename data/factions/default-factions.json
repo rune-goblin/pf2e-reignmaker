@@ -1,0 +1,68 @@
+[
+  {
+    "id": "km-candlemere-lizardfolk",
+    "name": "Candlemere Lizardfolk",
+    "attitude": "Indifferent",
+    "color": "#4d8ed9"
+  },
+  {
+    "id": "km-fort-drelev",
+    "name": "Fort Drelev",
+    "attitude": "Indifferent",
+    "color": "#d98e4d"
+  },
+  {
+    "id": "km-greengripe",
+    "name": "Greengripe",
+    "attitude": "Indifferent",
+    "color": "#4dd98e"
+  },
+  {
+    "id": "km-mbotuu",
+    "name": "M'botuu",
+    "attitude": "Indifferent",
+    "color": "#d94dc3"
+  },
+  {
+    "id": "km-nomen-centaurs",
+    "name": "Nomen Centaurs",
+    "attitude": "Indifferent",
+    "color": "#4d73d9"
+  },
+  {
+    "id": "km-pitax",
+    "name": "Pitax",
+    "attitude": "Unfriendly",
+    "color": "#d9c34d"
+  },
+  {
+    "id": "km-rostland",
+    "name": "Rostland",
+    "attitude": "Helpful",
+    "color": "#a64dd9"
+  },
+  {
+    "id": "km-sootscale-kobolds",
+    "name": "Sootscale Kobolds",
+    "attitude": "Indifferent",
+    "color": "#4dd973"
+  },
+  {
+    "id": "km-tiger-lords",
+    "name": "Tiger Lords",
+    "attitude": "Indifferent",
+    "color": "#d94d4d"
+  },
+  {
+    "id": "km-tok-nikrat",
+    "name": "Tok-Nikrat",
+    "attitude": "Indifferent",
+    "color": "#4dd9d9"
+  },
+  {
+    "id": "km-varnhold",
+    "name": "Varnhold",
+    "attitude": "Friendly",
+    "color": "#a6d94d"
+  }
+]

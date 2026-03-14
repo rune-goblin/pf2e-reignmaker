@@ -1,0 +1,124 @@
+{
+  "name": "Barbarian Raiders",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 8 },
+      "dex": { "mod": 5 },
+      "con": { "mod": 8 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 7 }
+    },
+    "attributes": {
+      "ac": { "value": 32 },
+      "hp": { "max": 268, "value": 268, "details": "Thresholds 178 (12 squares), 89 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 10 },
+        { "type": "splash-damage", "value": 7 }
+      ]
+    },
+    "details": {
+      "level": { "value": 12 },
+      "publicNotes": "<p>Ferocious barbarian warriors renowned for their devastating charges and battle fury.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 27 },
+      "reflex": { "value": 22 },
+      "will": { "value": 25 }
+    },
+    "perception": { "mod": 22 },
+    "traits": {
+      "value": ["troop", "humanoid", "barbarian"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 178 (12 squares), 89 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Furious Charge",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The Barbarian Raiders Stride up to double their Speed in a straight line and make a melee Strike at the end. If they moved at least 20 feet, the Strike deals an additional die of damage.</p>" },
+        "traits": { "value": ["move", "rage"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Revel in Battle",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> The Barbarian Raiders reduce an enemy to 0 HP.</p><p><strong>Effect</strong> The berserkers gain temporary HP equal to their level and can immediately Stride up to half their Speed toward another enemy.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Battle Fury",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The Barbarian Raiders gain a +2 status bonus to damage rolls but take a -1 penalty to AC. When below half HP, this bonus increases to +4 and the penalty increases to -2.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Barbarian Raiders",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 1.0,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

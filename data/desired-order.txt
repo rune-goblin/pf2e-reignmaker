@@ -1,0 +1,45 @@
+                                                                                                                         
+  1. Stability (uphold-stability)                                                                                          
+                                                                                                                           
+  - Deal with Unrest
+  - Arrest Dissidents                                                                                                      
+  - Execute or Pardon Prisoners                                                                                                                                                                                     
+                                                                                                                           
+  2. Territory (expand-borders)                                                                                            
+                                                                                                                                                                                                                              
+  - Send Scouts 
+  - Claim Hexes 
+  - Create Worksite 
+  - Build Roads                                                                                                            
+  - Fortify Hex                                                                                                            
+                                                                                                                           
+  3. Settlements (urban-planning)                                                                                          
+                                                                                                                           
+  - Establish Settlement  
+  - Upgrade Settlement                                                                                                   
+  - Build Structure                                                                                                        
+  - Repair Structure                                                                                                                                                                                                 
+                                                                                                                           
+  4. Military (military-operations)                                                                                        
+                                                                                                                                                                                                                                    
+  - Recruit Army  
+  - Deploy Army   
+  - Outfit Army 
+  - Tend Wounded                                                                                                          
+  - Train Army                                                                                                    
+  - Disband Army                                                                                                                                                                                                                  
+                                                                                                                           
+  5. Diplomacy (foreign-affairs)                                                                                           
+                                                                                                                           
+  - Diplomatic Mission     
+  - Request Economic Aid                                                                                                                                                                                                                                                                                                          
+  - Request Military Aid  
+  - Infiltration                                                                                                     
+                                                                                                                           
+  6. Treasury (economic-resources)                                                                                         
+                                                                                                                           
+  - Purchase Resources
+  - Sell Surplus                                                                                                      
+  - Harvest Resources                                                                                                      
+  - Collect Stipend                                                                                                        
+  

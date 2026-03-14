@@ -1,0 +1,134 @@
+{
+  "type": "support",
+  "family": "Diplomacy",
+  "description": "International relations and alliances",
+  "tiers": [
+    {
+      "id": "envoys-office",
+      "name": "Envoy's Office",
+      "description": "Basic diplomatic office for foreign relations",
+      "cost": {
+        "stone": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "diplomaticCapacity",
+          "value": 1,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "diplomaticMission"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embassy",
+      "name": "Embassy",
+      "description": "Formal embassy for establishing stronger foreign ties",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "diplomaticCapacity",
+          "value": 2,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "diplomaticMission",
+            "requestEconomicAid"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grand-embassy",
+      "name": "Grand Embassy",
+      "description": "Prestigious embassy that enhances international reputation",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "diplomaticCapacity",
+          "value": 3,
+          "duration": "permanent"
+        },
+        {
+          "type": "static",
+          "resource": "fame",
+          "value": 1,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "diplomaticMission",
+            "requestEconomicAid",
+            "requestMilitaryAid"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "diplomatic-quarter-support",
+      "name": "Diplomatic Quarter",
+      "description": "Entire district dedicated to international diplomacy",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "diplomaticCapacity",
+          "value": 4,
+          "duration": "permanent"
+        },
+        {
+          "type": "static",
+          "resource": "fame",
+          "value": 1,
+          "duration": "permanent"
+        },
+        {
+          "type": "static",
+          "resource": "unrest",
+          "value": -1,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "diplomaticMission",
+            "requestEconomicAid",
+            "requestMilitaryAid"
+          ]
+        }
+      ],
+      "manualEffects": [
+        "At the start of each Kingdom Turn, reduce Unrest by 1"
+      ]
+    }
+  ]
+}

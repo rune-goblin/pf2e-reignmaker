@@ -1,0 +1,90 @@
+{
+  "type": "support",
+  "family": "Revenue",
+  "description": "Tax collection and treasury",
+  "tiers": [
+    {
+      "id": "tax-office",
+      "name": "Tax Office",
+      "description": "Basic tax collection office",
+      "cost": {
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "personalIncome"
+          ]
+        }
+      ],
+      "manualEffects": [
+        "+1 Kingdom Wealth"
+      ]
+    },
+    {
+      "id": "counting-house",
+      "name": "Counting House",
+      "description": "Organized financial institution for tax collection",
+      "cost": {
+        "lumber": 2,
+        "stone": 4
+      },
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "personalIncome"
+          ]
+        }
+      ],
+      "manualEffects": [
+        "+2 Kingdom Wealth"
+      ]
+    },
+    {
+      "id": "treasury",
+      "name": "Treasury",
+      "description": "Comprehensive treasury for managing kingdom finances",
+      "cost": {
+        "lumber": 3,
+        "stone": 7,
+        "ore": 2
+      },
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "personalIncome"
+          ]
+        }
+      ],
+      "manualEffects": [
+        "+3 Kingdom Wealth",
+        "Personal Income uses Tier 3 income level"
+      ]
+    },
+    {
+      "id": "exchequer",
+      "name": "Exchequer",
+      "description": "Grand financial institution managing kingdom wealth",
+      "cost": {
+        "lumber": 5,
+        "stone": 13,
+        "ore": 6
+      },
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "personalIncome"
+          ]
+        }
+      ],
+      "manualEffects": [
+        "+4 Kingdom Wealth",
+        "Personal Income uses Tier 4 income level"
+      ]
+    }
+  ]
+}

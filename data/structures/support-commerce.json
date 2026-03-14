@@ -1,0 +1,109 @@
+{
+  "type": "support",
+  "family": "Commerce",
+  "description": "Trade and resource conversion",
+  "tiers": [
+    {
+      "id": "market-square",
+      "name": "Market Square",
+      "description": "Basic marketplace for trade and commerce",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "tradeRatio",
+          "value": {
+            "sell": "3:1",
+            "buy": "3:1"
+          }
+        }
+      ],
+      "manualEffects": [
+        "+1 Kingdom Wealth",
+        "Sell resources at 3:1 (3 resources → 1 gold)",
+        "Purchase resources at 3:1 (3 gold → 1 resource)",
+        "Purchase non-magical items up to settlement level"
+      ]
+    },
+    {
+      "id": "bazaar",
+      "name": "Bazaar",
+      "description": "Expansive marketplace with magical goods",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "tradeRatio",
+          "value": {
+            "sell": "2:1",
+            "buy": "2:1"
+          }
+        }
+      ],
+      "manualEffects": [
+        "+2 Kingdom Wealth",
+        "Sell resources at 2:1 (2 resources → 1 gold)",
+        "Purchase resources at 2:1 (2 gold → 1 resource)",
+        "Purchase non-magical items up to settlement level",
+        "Purchase scrolls and consumables up to settlement level"
+      ]
+    },
+    {
+      "id": "merchant-guild",
+      "name": "Merchant Guild",
+      "description": "Organized merchant consortium with improved rates",
+      "cost": {
+        "lumber": 4,
+        "stone": 4,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "tradeRatio",
+          "value": {
+            "sell": "3:2",
+            "buy": "3:2"
+          }
+        }
+      ],
+      "manualEffects": [
+        "+3 Kingdom Wealth",
+        "Sell resources at 3:2 (3 resources → 2 gold)",
+        "Purchase resources at 3:2 (3 gold → 2 resources)",
+        "Purchase magical items up to settlement level"
+      ]
+    },
+    {
+      "id": "imperial-bank",
+      "name": "Imperial Bank",
+      "description": "Grand financial institution with optimal rates",
+      "cost": {
+        "lumber": 6,
+        "stone": 6,
+        "ore": 12
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "tradeRatio",
+          "value": {
+            "sell": "1:1",
+            "buy": "1:1"
+          }
+        }
+      ],
+      "manualEffects": [
+        "+4 Kingdom Wealth",
+        "Sell resources at 1:1 (1 resource → 1 gold)",
+        "Purchase resources at 1:1 (1 gold → 1 resource)",
+        "Purchase magical items up to settlement level"
+      ]
+    }
+  ]
+}

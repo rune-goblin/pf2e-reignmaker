@@ -1,0 +1,970 @@
+{
+  "prototypeToken": {
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": 0,
+    "sight": {
+      "color": null,
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": false,
+        "autoscale": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Pitax War Machines",
+    "actorLink": false,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/pf2e-kingmaker/assets/actor-tokens/party/creatures/purple-24.webp",
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
+    },
+    "detectionModes": [],
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "folder": "9foRrkueLg3QnhLj",
+  "name": "Pitax War Machines",
+  "type": "army",
+  "effects": [],
+  "system": {
+    "ac": {
+      "value": 36,
+      "potency": 0
+    },
+    "attributes": {
+      "hp": {
+        "value": 6,
+        "max": 6,
+        "routThreshold": 4,
+        "temp": 0
+      }
+    },
+    "details": {
+      "level": {
+        "value": 14
+      },
+      "description": "<p>These siege weapons are positioned atop all of the city’s watchtowers and afford a controlling view of all approaches.</p>"
+    },
+    "traits": {
+      "rarity": "common",
+      "type": "siege",
+      "value": []
+    },
+    "consumption": 1,
+    "recruitmentDC": 15,
+    "resources": {
+      "potions": {
+        "value": 0
+      },
+      "ammunition": {
+        "value": 7
+      }
+    },
+    "saves": {
+      "maneuver": 22,
+      "morale": 28
+    },
+    "weapons": {
+      "melee": null,
+      "ranged": {
+        "name": "Siege Engine",
+        "potency": 0
+      }
+    },
+    "_migration": {
+      "version": 0.953,
+      "previous": {
+        "schema": 0.926,
+        "foundry": "13.351",
+        "system": "7.7.3"
+      }
+    },
+    "scouting": 25
+  },
+  "img": "modules/pf2e-kingmaker/assets/actor-tokens/party/creatures/purple-24.webp",
+  "items": [
+    {
+      "_id": "Jd1g3ovpiC39CYRk",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Rally",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army's leaders attempt to bolster the soldiers' morale and fight back the effects of fear and panic. Attempt a Morale check against a target enemy army of your choice.</p>\n<p><strong>Critical Success</strong> If your army is @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}, it loses the routed condition. Reduce your army's @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken} condition by 2.</p>\n<p><strong>Success</strong> Reduce your army's shaken condition by 1.</p>\n<p><strong>Critical Failure</strong> Your attempt to rally backfires—increase your army's shaken condition by 1.</p>"
+        },
+        "rules": [],
+        "slug": "rally",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "morale"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.8XXylMGJuqe1ozMk",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "1egfYGFDnAX5opwc",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Retreat",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p><strong>Prerequisite</strong> Your army is not @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged}.</p>\n<p>Your army tries to escape from the battlefield.</p>\n<p>If your army is already @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant}, it flees the battlefield, is no longer part of the war encounter, and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}. </p>\n<p>Otherwise, your army gains the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition.</p>"
+        },
+        "rules": [],
+        "slug": "retreat",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 3
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.IhjlbJinff1wUSjL",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "A5deiJajssYXsGeB",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Disengage",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attempts to disengage from enemy armies to put some distance between itself and the enemy.</p>\n<p>Attempt a Maneuver check against each army your army is @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with.</p>\n<p><strong>Critical Success</strong> Your army is no longer engaged with the target army. In addition, your army is automatically no longer engaged with any armies you haven't yet rolled a Maneuver check against during this war action.</p>\n<p><strong>Success</strong> Your army breaks free and is no longer engaged with the target army.</p>\n<p><strong>Failure</strong> Your army remains engaged with the target army.</p>\n<p><strong>Critical Failure</strong> Your army remains engaged with the target army and, for the remainder of this turn, your army cannot attempt to disengage from any army with which it is still engaged.</p>"
+        },
+        "rules": [],
+        "slug": "disengage",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "maneuver"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.Pu5bptxLrKFyEzFh",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "pF7BiYB0G1hNsXek",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Guard",
+      "system": {
+        "description": {
+          "value": "",
+          "gm": ""
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": null,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "campaign": "kingmaker",
+        "category": "kingdom-activity",
+        "level": {
+          "value": 1
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.phtwOol1wETryF7b",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "AutD88eYafZX1wQW",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Battle",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attacks an enemy army with a Strike against the enemy army's AC. You can do so with a melee Strike only if you are @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with the target army. Otherwise, you must use a ranged Strike.</p>\n<p>An army can attempt a maximum of 5 ranged Strikes per war encounter (unless it has the @UUID[Compendium.pf2e.kingmaker-features.Item.DrUT5sE0EuU5dtPa]{Increased Ammunition} tactic). As with any attack, multiple Strikes in a single round suffer a multiple attack penalty.</p>\n<p>A siege engine can use the Battle action to attack and damage a fortification.</p>\n<p><strong>Critical Success</strong> You deal 2 points of damage to the army.</p>\n<p><strong>Success</strong> You deal 1 point of damage to the army.</p>"
+        },
+        "rules": [],
+        "slug": "battle",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "attack"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.qCxyuNhzaaYlYBum",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "rGxlncNMXLVMXZ6s",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Advance",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attempts to close the distance with a target enemy army it is not engaged with by attempting a Maneuver check.</p>\n<p><strong>Critical Success</strong> The enemy army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with your army, even if it previously had the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition (in which case it loses that condition and becomes engaged).</p>\n<p><strong>Success</strong> If the target army is distant, it loses that condition; otherwise, it becomes engaged.</p>\n<p><strong>Failure</strong> Your army's attempt to advance fails.</p>\n<p><strong>Critical Failure</strong> Your army's attempt to advance fails, and it becomes disorganized, becoming @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1} until the start of its next turn.</p>"
+        },
+        "rules": [],
+        "slug": "advance",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "maneuver"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.wHoXoyci1lddRR2R",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "3b2RJnJKoGKlvWfq",
+      "folder": "e185cDQaLjU3uZ62",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Increased Ammunition",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>You increase the number of times your army can use ranged Strikes in each war encounter by 2. This tactic can be taken multiple times; each time you do so, increase the army's maximum number of ranged Strikes by 2.</p>"
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "add",
+            "path": "system.resources.ammunition.max",
+            "value": 2
+          }
+        ],
+        "slug": "increased-ammunition",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "cavalry",
+            "infantry",
+            "siege",
+            "skirmisher"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "0",
+        "level": {
+          "value": 5
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.DrUT5sE0EuU5dtPa",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "d5x6WrErWAOeUlLO",
+      "folder": "e185cDQaLjU3uZ62",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Explosive Shot",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The army's ranged attacks explode and spray fire, shrapnel, or other damaging material in every direction. Whenever the army critically hits a non-distant army with a ranged Strike, inflict 1 point of additional damage to another non-distant enemy army of your choice. You can use the @UUID[Compendium.pf2e.kingmaker-features.Item.HLu1o1RzCZxWjOJJ]{Overwhelming Bombardment} tactical war action with the army.</p>"
+        },
+        "rules": [
+          {
+            "key": "GrantItem",
+            "uuid": "Compendium.pf2e.kingmaker-features.Item.HLu1o1RzCZxWjOJJ",
+            "flag": "overwhelmingBombardment"
+          }
+        ],
+        "slug": "explosive-shot",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "siege"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "1",
+        "level": {
+          "value": 11
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {},
+        "pf2e": {
+          "itemGrants": {
+            "overwhelmingBombardment": {
+              "id": "4VhEvG7Plwz0Wszk",
+              "onDelete": "detach"
+            }
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.ZSUPsqeMBDTaX2H4",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "i18YzT3zo3skuWng",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Overwhelming Bombardment",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p><strong>Requirement </strong>@UUID[Compendium.pf2e.kingmaker-features.Item.ZSUPsqeMBDTaX2H4]{Explosive Shot}</p>\n<hr />\n<p>Your siege engines focus all their fire on a fortification. This war action counts as using two ranged Strikes for the purposes of depleting an army's shots. Attempt a ranged Strike against the target fortification's AC.</p>\n<p><strong>Critical Success</strong> You deal 2 points of damage to the fortification. You also deal 1 point of damage to up to two armies of your choice that are within the fortification.</p>\n<p><strong>Success</strong> You deal 1 point of damage to the fortification, and an additional 1 point of damage either to the fortification or to an army within the fortification (your choice of which).</p>\n<p><strong>Failure</strong> You deal 1 damage to the fortification.</p>\n<p><strong>Critical Failure</strong> You deal no damage, and your army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.ibcMcEGRbPRtk9Pu]{Outflanked} until the start of its next turn.</p>"
+        },
+        "rules": [],
+        "slug": "overwhelming-bombardment",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "attack",
+            "siege"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {},
+        "pf2e": {
+          "grantedBy": {
+            "id": "d5x6WrErWAOeUlLO",
+            "onDelete": "cascade"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.HLu1o1RzCZxWjOJJ",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "4VhEvG7Plwz0Wszk",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "8MX7QPWvOAspWNmN",
+      "folder": "e185cDQaLjU3uZ62",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Toughened Soldiers",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The army is particularly hardy. Increase its maximum Hit Points by 1. You can take this tactic multiple times; each time you do, increase the army's maximum Hit Points by 1.</p>"
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "add",
+            "path": "system.attributes.hp.max",
+            "value": 1
+          }
+        ],
+        "slug": "toughened-soldiers",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "cavalry",
+            "infantry",
+            "siege",
+            "skirmisher"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "2",
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.IiD3kKszFfHZ9cZ1",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "WzQrGDUWVBV0XU2r",
+      "folder": "e185cDQaLjU3uZ62",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Toughened Soldiers",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The army is particularly hardy. Increase its maximum Hit Points by 1. You can take this tactic multiple times; each time you do, increase the army's maximum Hit Points by 1.</p>"
+        },
+        "rules": [
+          {
+            "key": "ActiveEffectLike",
+            "mode": "add",
+            "path": "system.attributes.hp.max",
+            "value": 1
+          }
+        ],
+        "slug": "toughened-soldiers",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "cavalry",
+            "infantry",
+            "siege",
+            "skirmisher"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "3",
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.IiD3kKszFfHZ9cZ1",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.pf2e.kingmaker-bestiary.Actor.mCUB9NQUkbEayP7d",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "testmaker",
+      "uuid": "Actor.mCUB9NQUkbEayP7d",
+      "coreVersion": "13.351",
+      "systemId": "pf2e",
+      "systemVersion": "7.8.0"
+    },
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.7.3",
+    "createdTime": 1763405998845,
+    "modifiedTime": 1763405998845,
+    "lastModifiedBy": "cbiFlE01TKN2dJI4"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

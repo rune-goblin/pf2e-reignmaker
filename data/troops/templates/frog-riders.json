@@ -1,0 +1,125 @@
+{
+  "name": "Frog Riders",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 7 },
+      "dex": { "mod": 7 },
+      "con": { "mod": 7 },
+      "int": { "mod": 3 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 3 }
+    },
+    "attributes": {
+      "ac": { "value": 30 },
+      "hp": { "max": 175, "value": 175, "details": "Thresholds 116 (12 squares), 58 (8 squares)" },
+      "speed": { "value": 35, "otherSpeeds": [{ "type": "swim", "value": 35 }], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 8 },
+        { "type": "splash-damage", "value": 6 }
+      ]
+    },
+    "details": {
+      "level": { "value": 10 },
+      "publicNotes": "<p>Boggard warriors mounted on giant frogs, capable of ambushing enemies by emerging from water.</p>",
+      "languages": { "value": ["boggard"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 22 },
+      "reflex": { "value": 22 },
+      "will": { "value": 19 }
+    },
+    "perception": { "mod": 19, "senses": [{ "type": "darkvision" }] },
+    "traits": {
+      "value": ["troop", "humanoid", "boggard"],
+      "rarity": "rare",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "darkvision" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 116 (12 squares), 58 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Aquatic Assault",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The Frog Riders can start encounters already engaged with an enemy if the battle takes place in swamp or water terrain. They can also breathe underwater and have a swim Speed equal to their land Speed.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Tongue Lash",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The frog mounts lash out with their tongues. The Frog Riders make a melee Strike with a reach of 20 feet. On a hit, the target is also grabbed until the end of the Frog Riders' next turn.</p>" },
+        "traits": { "value": ["reach"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Terrifying Croak",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The boggards unleash a thunderous chorus of croaks. All enemies within 60 feet must attempt a Will save or become frightened 1 (frightened 2 on a critical failure). A creature that succeeds is temporarily immune for 1 hour.</p>" },
+        "traits": { "value": ["auditory", "fear", "mental"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Frog Riders",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "cavalry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Lance Charge",
+        "attackBenchmark": 1.0,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing"
+      }
+    }
+  }
+}

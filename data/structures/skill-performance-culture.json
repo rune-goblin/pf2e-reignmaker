@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Performance & Culture",
+  "description": "Tier progression for Performance and Culture",
+  "tiers": [
+    {
+      "id": "buskers-alley",
+      "name": "Busker's Row",
+      "description": "Street performers and traveling entertainers",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "performance",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Performance"
+      ]
+    },
+    {
+      "id": "famous-tavern",
+      "name": "Minstrel's Stage",
+      "description": "Small raised platform for organized shows",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "performance",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Performance, Diplomacy"
+      ]
+    },
+    {
+      "id": "performance-hall",
+      "name": "Theater",
+      "description": "Professional indoor performance venue",
+      "cost": {
+        "lumber": 6,
+        "stone": 3,
+        "ore": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "performance",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Performance, Diplomacy, Lore",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "grand-amphitheater",
+      "name": "Grand Opera House",
+      "description": "Elite venue for legendary performers",
+      "cost": {
+        "lumber": 9,
+        "stone": 9,
+        "ore": 6
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "performance",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "lore",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Performance, Diplomacy, Lore",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Bard, Swashbuckler, Exemplar"
+      ]
+    }
+  ],
+  "skills": [
+    "Performance",
+    "Diplomacy",
+    "Lore"
+  ]
+}

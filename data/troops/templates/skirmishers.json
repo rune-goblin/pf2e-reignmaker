@@ -1,0 +1,112 @@
+{
+  "name": "Skirmishers",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 4 },
+      "dex": { "mod": 6 },
+      "con": { "mod": 2 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 2 }
+    },
+    "attributes": {
+      "ac": { "value": 21 },
+      "hp": { "max": 56, "value": 56, "details": "Thresholds 37 (12 squares), 18 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 5 },
+        { "type": "splash-damage", "value": 4 }
+      ]
+    },
+    "details": {
+      "level": { "value": 5 },
+      "publicNotes": "<p>Lightly armored ranged combatants who rely on mobility and evasion rather than heavy protection.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 9 },
+      "reflex": { "value": 17 },
+      "will": { "value": 15 }
+    },
+    "perception": { "mod": 12 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "common",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 37 (12 squares), 18 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Volley",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The skirmishers fire a coordinated volley. They make a ranged Strike against each enemy within a 20-foot burst within 100 feet. Each enemy takes damage only once regardless of how many Strikes hit.</p>" },
+        "traits": { "value": ["ranged"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Evasive Maneuvers",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Trigger</strong> The skirmishers are targeted by an attack.</p><p><strong>Effect</strong> The skirmishers Step.</p>" },
+        "traits": { "value": ["move"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Skirmishers",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "skirmisher",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Ranged Volley",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.25,
+        "damageType": "piercing",
+        "isRanged": true
+      }
+    }
+  }
+}

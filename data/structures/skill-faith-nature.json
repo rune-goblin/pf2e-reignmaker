@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Faith & Nature",
+  "description": "Tier progression for Faith & Nature",
+  "tiers": [
+    {
+      "id": "shrine",
+      "name": "Sacred Grove",
+      "description": "A simple glade or standing stones tended by a few faithful",
+      "cost": {
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "religion",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Religion"
+      ]
+    },
+    {
+      "id": "temple",
+      "name": "Shrine",
+      "description": "A humble structure honoring the spirits and gods of the wild",
+      "cost": {
+        "lumber": 2,
+        "stone": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "religion",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Religion, Medicine"
+      ]
+    },
+    {
+      "id": "temple-district",
+      "name": "Temple",
+      "description": "A grand hall entwined with gardens and sacred trees",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "religion",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "nature",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Religion, Medicine, Nature",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "grand-basilica",
+      "name": "Cathedral",
+      "description": "A magnificent seat of divine and natural reverence, where faith and the living world unite",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "religion",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "medicine",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "nature",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Religion, Medicine, Nature",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Cleric, Champion, Oracle, Druid, Animist"
+      ]
+    }
+  ],
+  "skills": [
+    "Religion",
+    "Medicine",
+    "Nature"
+  ]
+}

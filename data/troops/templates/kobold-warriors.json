@@ -1,0 +1,112 @@
+{
+  "name": "Kobold Warriors",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 3 },
+      "dex": { "mod": 4 },
+      "con": { "mod": 3 },
+      "int": { "mod": 3 },
+      "wis": { "mod": 3 },
+      "cha": { "mod": 1 }
+    },
+    "attributes": {
+      "ac": { "value": 19 },
+      "hp": { "max": 45, "value": 45, "details": "Thresholds 30 (12 squares), 15 (8 squares)" },
+      "speed": { "value": 25, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 3 },
+        { "type": "splash-damage", "value": 3 }
+      ]
+    },
+    "details": {
+      "level": { "value": 3 },
+      "publicNotes": "<p>A regiment of kobold warriors who have learned to channel their natural nervousness into tactical advantages.</p>",
+      "languages": { "value": ["common", "draconic"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 9 },
+      "reflex": { "value": 12 },
+      "will": { "value": 6 }
+    },
+    "perception": { "mod": 9, "senses": [{ "type": "darkvision" }] },
+    "traits": {
+      "value": ["troop", "humanoid", "kobold"],
+      "rarity": "common",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "darkvision" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 30 (12 squares), 15 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Accustomed to Panic",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Trigger</strong> The Kobold Warriors would gain the fleeing condition.</p><p><strong>Effect</strong> The warriors channel their fear into aggression. Instead of fleeing, they can immediately make a melee Strike against an adjacent enemy with a +2 circumstance bonus to the attack roll.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Trap Setters",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>When the Kobold Warriors take the Defensive Stance action in difficult terrain, enemies that enter the area take 2d6 piercing damage from hidden traps.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Kobold Warriors",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.25,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

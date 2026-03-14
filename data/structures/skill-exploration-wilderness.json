@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Exploration & Wilderness",
+  "description": "Tier progression for Exploration & Wilderness",
+  "tiers": [
+    {
+      "id": "hunters-lodge",
+      "name": "Hunter's Lodge",
+      "description": "A rugged shelter where hunters share trails, trophies, and hard-won survival lore.",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "survival",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Survival"
+      ]
+    },
+    {
+      "id": "outfitter",
+      "name": "Outfitter",
+      "description": "A well-stocked post supplying gear, maps, and training for wilderness expeditions.",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "survival",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "nature",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Survival, Nature"
+      ]
+    },
+    {
+      "id": "wardens-hall",
+      "name": "Warden's Hall",
+      "description": "Headquarters for rangers and scouts who safeguard the wilds and guide explorers.",
+      "cost": {
+        "lumber": 6,
+        "stone": 3,
+        "ore": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "survival",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "nature",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "stealth",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Survival, Nature, Stealth",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "wildkeepers-sanctuary",
+      "name": "Wildkeepers' Sanctuary",
+      "description": "A revered haven where the realm's greatest wardens preserve the balance between nature and civilization.",
+      "cost": {
+        "lumber": 9,
+        "stone": 9,
+        "ore": 6
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "survival",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "nature",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "stealth",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Survival, Nature, Stealth",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Ranger, Kineticist"
+      ]
+    }
+  ],
+  "skills": [
+    "Survival",
+    "Nature",
+    "Stealth"
+  ]
+}

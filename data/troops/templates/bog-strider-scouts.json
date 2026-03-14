@@ -1,0 +1,126 @@
+{
+  "name": "Bog Strider Scouts",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 5 },
+      "dex": { "mod": 8 },
+      "con": { "mod": 5 },
+      "int": { "mod": 5 },
+      "wis": { "mod": 7 },
+      "cha": { "mod": 3 }
+    },
+    "attributes": {
+      "ac": { "value": 30 },
+      "hp": { "max": 131, "value": 131, "details": "Thresholds 87 (12 squares), 43 (8 squares)" },
+      "speed": { "value": 35, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 8 },
+        { "type": "splash-damage", "value": 6 }
+      ]
+    },
+    "details": {
+      "level": { "value": 10 },
+      "publicNotes": "<p>Bog strider skirmishers who use specialized nets and their ability to walk on water to outmaneuver foes.</p>",
+      "languages": { "value": ["aquan"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 19 },
+      "reflex": { "value": 24 },
+      "will": { "value": 22 }
+    },
+    "perception": { "mod": 19, "senses": [{ "type": "darkvision" }, { "type": "tremorsense", "range": 60 }] },
+    "traits": {
+      "value": ["troop", "aberration"],
+      "rarity": "rare",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "darkvision" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 87 (12 squares), 43 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Water Stride",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The Bog Strider Scouts can walk on the surface of water and other liquids as if it were solid ground. They ignore difficult terrain caused by water.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Net Volley",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The scouts throw a coordinated barrage of weighted nets. They make a ranged Strike against each enemy in a 15-foot burst within 60 feet. On a hit, the target takes damage and is flat-footed until the end of its next turn. On a critical hit, the target is also immobilized until it Escapes.</p>" },
+        "traits": { "value": ["ranged"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Bog Ambush",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/FreeAction.webp",
+      "system": {
+        "actionType": { "value": "free" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> The Bog Strider Scouts roll initiative.</p><p><strong>Effect</strong> If the encounter takes place in swamp or water terrain, the scouts can immediately Stride up to half their Speed.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Bog Strider Scouts",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "skirmisher",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Ranged Volley",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing",
+        "isRanged": true
+      }
+    }
+  }
+}

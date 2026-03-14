@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Crime & Intrigue",
+  "description": "Tier progression for Crime & Intrigue",
+  "tiers": [
+    {
+      "id": "rats-warren",
+      "name": "Rat's Warren",
+      "description": "Hidden underground criminal hideout",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "thievery",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Thievery"
+      ]
+    },
+    {
+      "id": "smugglers-den",
+      "name": "Smuggler's Den",
+      "description": "Secret facility for illicit trade operations",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "thievery",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "deception",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Thievery, Deception"
+      ]
+    },
+    {
+      "id": "thieves-guild",
+      "name": "Thieves' Guild",
+      "description": "Organized crime network headquarters",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "thievery",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "deception",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "stealth",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Thievery, Deception, Stealth",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "shadow-network",
+      "name": "Shadow Network",
+      "description": "Sophisticated underground intelligence network",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "thievery",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "deception",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "stealth",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Thievery, Deception, Stealth",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Rogue, Investigator"
+      ]
+    }
+  ],
+  "skills": [
+    "Thievery",
+    "Deception",
+    "Stealth"
+  ]
+}

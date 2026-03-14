@@ -1,0 +1,85 @@
+{
+  "type": "support",
+  "family": "Military",
+  "description": "Military housing and support",
+  "tiers": [
+    {
+      "id": "barracks",
+      "name": "Barracks",
+      "description": "Basic military housing for troops",
+      "cost": {
+        "stone": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "armyCapacity",
+          "value": 1,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "garrison",
+      "name": "Garrison",
+      "description": "Fortified military quarters for larger forces",
+      "cost": {
+        "lumber": 2,
+        "stone": 4
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "armyCapacity",
+          "value": 2,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "fortress",
+      "name": "Fortress",
+      "description": "Heavily defended military installation",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "armyCapacity",
+          "value": 3,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "citadel",
+      "name": "Citadel",
+      "description": "Imposing fortress that projects military might",
+      "cost": {
+        "lumber": 3,
+        "stone": 12,
+        "ore": 9
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "armyCapacity",
+          "value": 4,
+          "duration": "permanent"
+        },
+        {
+          "type": "static",
+          "resource": "unrest",
+          "value": -1,
+          "duration": "permanent"
+        }
+      ],
+      "manualEffects": [
+        "At the start of each Kingdom Turn, reduce Unrest by 1"
+      ]
+    }
+  ]
+}

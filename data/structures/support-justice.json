@@ -1,0 +1,118 @@
+{
+  "type": "support",
+  "family": "Justice",
+  "description": "Law enforcement and prisoner management",
+  "tiers": [
+    {
+      "id": "stocks",
+      "name": "Stocks",
+      "description": "Basic detention facility for troublemakers",
+      "cost": {
+        "lumber": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "imprisonedUnrestCapacity",
+          "value": 4,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "executePrisoners"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jail",
+      "name": "Jail",
+      "description": "Secure holding facility for criminals",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "imprisonedUnrestCapacity",
+          "value": 8,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "executePrisoners"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "prison",
+      "name": "Prison",
+      "description": "Large detention complex with rehabilitation options",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "imprisonedUnrestCapacity",
+          "value": 12,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "executePrisoners",
+            "pardonPrisoners"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "donjon",
+      "name": "Donjon",
+      "description": "Fortress-like prison with advanced security",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "imprisonedUnrestCapacity",
+          "value": 16,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "unlock",
+          "actions": [
+            "executePrisoners",
+            "pardonPrisoners"
+          ]
+        },
+        {
+          "type": "ruleMod",
+          "rule": "convertUnrestPerTurn",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Once per turn, automatically converts 1 regular Unrest to imprisoned Unrest"
+      ]
+    }
+  ]
+}

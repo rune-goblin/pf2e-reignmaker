@@ -1,0 +1,125 @@
+{
+  "name": "Siege Engine Battery",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 9 },
+      "dex": { "mod": 5 },
+      "con": { "mod": 9 },
+      "int": { "mod": 5 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 4 }
+    },
+    "attributes": {
+      "ac": { "value": 33 },
+      "hp": { "max": 323, "value": 323, "details": "Thresholds 215 (12 squares), 107 (8 squares)" },
+      "speed": { "value": 20, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 11 },
+        { "type": "splash-damage", "value": 8 }
+      ]
+    },
+    "details": {
+      "level": { "value": 14 },
+      "publicNotes": "<p>A formation of heavy siege weapons crewed by trained engineers, capable of devastating bombardments against fortifications and massed armies.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 30 },
+      "reflex": { "value": 22 },
+      "will": { "value": 25 }
+    },
+    "perception": { "mod": 25 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "rare",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 215 (12 squares), 107 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Massive Bombardment",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The battery launches a devastating barrage at a point within 300 feet. All creatures in a 30-foot burst take siege damage with a basic Reflex save. This attack deals double damage to fortifications and structures.</p>" },
+        "traits": { "value": ["ranged"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Cannot Engage",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>Siege Engine Batteries cannot make melee Strikes while engaged with an enemy army. They must first disengage or be protected by allied troops.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Concentrated Fire",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": { "value": "<p>The battery focuses all weapons on a single target. Make a ranged Strike with a +2 circumstance bonus. On a hit, deal double damage and the target is stunned 1.</p>" },
+        "traits": { "value": ["ranged"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Siege Engine Battery",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "siege",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Siege Attack",
+        "attackBenchmark": 0.5,
+        "damageBenchmark": 1.0,
+        "damageType": "bludgeoning",
+        "isRanged": true
+      }
+    }
+  }
+}

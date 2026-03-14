@@ -1,0 +1,1239 @@
+{
+  "version": "2.0.0",
+  "description": "Army tactics and abilities library for PF2e troops",
+
+  "basic_actions": {
+    "_description": "Standard actions available to all troops",
+    "form-up": {
+      "_id": "reignmaker-form-up",
+      "name": "Form Up",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "interaction",
+        "description": { "value": "<p>The troop chooses one of the squares it currently occupies and moves, condensing into a contiguous formation that includes that square. The troop can't share space with other creatures.</p>" },
+        "traits": { "value": [] },
+        "slug": "form-up"
+      }
+    },
+    "troop-movement": {
+      "_id": "reignmaker-troop-movement",
+      "name": "Troop Movement",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>Whenever a troop Strides, it first Forms Up as a free action to condense into a 20-foot-by-20-foot area (minus any missing squares), then moves up to its Speed. This works just like a Gargantuan creature moving; for instance, if any square of the troop enters difficult terrain, the extra movement cost applies to the whole troop.</p>" },
+        "traits": { "value": [] },
+        "slug": "troop-movement"
+      }
+    },
+    "guard": {
+      "_id": "reignmaker-guard",
+      "name": "Guard",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "defensive",
+        "description": { "value": "<p>The troop adopts a defensive formation. Until the start of its next turn, the troop gains a +2 circumstance bonus to AC.</p>" },
+        "traits": { "value": [] },
+        "slug": "guard"
+      }
+    },
+    "disengage": {
+      "_id": "reignmaker-disengage",
+      "name": "Disengage",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "defensive",
+        "description": { "value": "<p>The troop attempts to withdraw from combat. Make an Athletics or Acrobatics check against the highest Reflex DC among enemies adjacent to the troop.</p><p><strong>Critical Success</strong> The troop Strides up to its Speed without provoking reactions.</p><p><strong>Success</strong> The troop Strides up to its Speed without provoking reactions.</p><p><strong>Failure</strong> The troop Strides up to its Speed, provoking reactions as normal.</p><p><strong>Critical Failure</strong> The troop Strides up to its Speed, provoking reactions as normal.</p><p>The troop cannot move through squares occupied by enemies.</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "disengage"
+      }
+    },
+    "rally": {
+      "_id": "reignmaker-rally",
+      "name": "Rally",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "defensive",
+        "description": { "value": "<p>A leader within the troop bolsters morale. The troop reduces its frightened condition by 2.</p>" },
+        "traits": { "value": ["auditory", "mental"] },
+        "slug": "rally"
+      }
+    }
+  },
+
+  "creature_abilities": {
+    "_description": "Abilities that come from creature type, not learnable tactics",
+    "darkvision": {
+      "_id": "reignmaker-darkvision",
+      "name": "Darkvision",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The troop can see in darkness and dim light just as well as in bright light.</p>" },
+        "traits": { "value": [] },
+        "slug": "darkvision"
+      }
+    },
+    "low-light-vision": {
+      "_id": "reignmaker-low-light-vision",
+      "name": "Low-Light Vision",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The troop can see in dim light as though it were bright light.</p>" },
+        "traits": { "value": [] },
+        "slug": "low-light-vision"
+      }
+    },
+    "regeneration": {
+      "_id": "reignmaker-regeneration",
+      "name": "Regeneration",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>At the beginning of its turn, the troop regains Hit Points equal to its level (minimum 5). The troop cannot be destroyed unless enemies can prevent regeneration (typically with fire or acid). While regeneration is suppressed, the troop loses this healing and its Rout Threshold increases by 1.</p>" },
+        "traits": { "value": [] },
+        "slug": "regeneration"
+      }
+    },
+    "flight": {
+      "_id": "reignmaker-flight",
+      "name": "Flight",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The troop has a fly Speed and ignores all ground-based difficult terrain. When they use the Disengage action against enemies that cannot fly, the enemies take a -2 circumstance penalty to any reactions. Enemies that lack the ability to fly suffer a -2 circumstance penalty on melee Strikes against this troop.</p>" },
+        "traits": { "value": [] },
+        "slug": "flight"
+      }
+    },
+    "trample": {
+      "_id": "reignmaker-trample",
+      "name": "Trample",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop Strides up to double their Speed and can move through spaces occupied by creatures of their size or smaller. Each creature they move through takes 2d6 + the troop's level bludgeoning damage with a basic Reflex save (DC equals the troop's class DC or 10 + level + Strength modifier). A creature can only take this damage once per Trample.</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "trample"
+      }
+    }
+  },
+
+  "tactics": {
+    "_description": "Learnable tactics that armies can train. Each tactic may grant a passive bonus, an action, or both.",
+
+    "reactive-strike": {
+      "_id": "reignmaker-reactive-strike",
+      "name": "Reactive Strike",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> A creature within the troop's reach uses a manipulate action or a move action, makes a ranged attack, or leaves a square during a move action it's using.</p><p><strong>Effect</strong> The troop makes a melee Strike against the triggering creature. If the attack is a critical hit and the trigger was a manipulate action, the troop disrupts that action. This Strike doesn't count toward the troop's multiple attack penalty, and the troop's multiple attack penalty doesn't apply to this Strike.</p>" },
+        "traits": { "value": [] },
+        "slug": "reactive-strike"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry"],
+        "minLevel": 1
+      }
+    },
+    "close-combat-specialists": {
+      "_id": "reignmaker-close-combat-specialists",
+      "name": "Close Combat Specialists",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop excels at close-quarters combat. They gain a +1 status bonus on melee Strikes but suffer a -1 status penalty on ranged Strikes.</p>" },
+        "traits": { "value": [] },
+        "slug": "close-combat-specialists"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry"],
+        "minLevel": 1
+      }
+    },
+    "overrun": {
+      "_id": "reignmaker-overrun",
+      "name": "Overrun",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop gains a +1 status bonus on melee Strikes against creatures that are Medium or smaller, or against other troops without mounts. However, the troop takes a -1 status penalty on Reflex saves against area effects and Will saves against mental effects.</p>" },
+        "traits": { "value": [] },
+        "slug": "overrun"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry"],
+        "minLevel": 1
+      }
+    },
+    "cavalry-charge": {
+      "_id": "reignmaker-cavalry-charge",
+      "name": "Cavalry Charge",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop charges in a straight line up to double its Speed. Make a melee Strike against each enemy whose space the troop moves through. On a hit, the target is also pushed 5 feet to either side (troop's choice). On a critical hit, the target is also knocked prone.</p>" },
+        "traits": { "value": ["move", "attack"] },
+        "slug": "cavalry-charge"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry"],
+        "minLevel": 1
+      }
+    },
+    "hold-the-line": {
+      "_id": "reignmaker-hold-the-line",
+      "name": "Hold the Line",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The troop is trained to stand firm against terror. They gain a +2 circumstance bonus on saves against fear effects and reduce the value of any frightened condition they gain by 1 (minimum 0).</p>" },
+        "traits": { "value": [] },
+        "slug": "hold-the-line"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 1
+      }
+    },
+    "keen-eyed": {
+      "_id": "reignmaker-keen-eyed",
+      "name": "Keen Eyed",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop includes vigilant scouts and spotters. They gain a +2 status bonus to initiative checks and Perception checks to Seek hidden creatures.</p>" },
+        "traits": { "value": [] },
+        "slug": "keen-eyed"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 1
+      }
+    },
+    "toughened-soldiers": {
+      "_id": "reignmaker-toughened-soldiers",
+      "name": "Toughened Soldiers",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The troop is particularly hardy. They gain +10 maximum Hit Points, plus +2 for each level above 1st.</p>" },
+        "traits": { "value": [] },
+        "slug": "toughened-soldiers"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 1
+      }
+    },
+    "live-off-the-land": {
+      "_id": "reignmaker-live-off-the-land",
+      "name": "Live off the Land",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The troop never counts against the kingdom's Consumption. They can forage and hunt to sustain themselves indefinitely.</p>" },
+        "traits": { "value": [] },
+        "slug": "live-off-the-land"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "skirmisher"],
+        "minLevel": 1
+      }
+    },
+    "keep-up-the-pressure": {
+      "_id": "reignmaker-keep-up-the-pressure",
+      "name": "Keep Up the Pressure",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop attacks in relentless waves. Their multiple attack penalty is -4 on the second attack and -8 on the third, instead of -5 and -10.</p>" },
+        "traits": { "value": [] },
+        "slug": "keep-up-the-pressure"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 3
+      }
+    },
+    "defensive-tactics": {
+      "_id": "reignmaker-defensive-tactics",
+      "name": "Defensive Stance",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "defensive",
+        "description": { "value": "<p>The troop uses shields, pikes, or positioning to protect an adjacent ally. Choose one adjacent allied creature or troop. Until the start of your next turn, that ally cannot be flanked by enemies you threaten, and gains a +1 circumstance bonus to AC against attacks from enemies you threaten.</p><p>Additionally, when using the Guard action, the troop gains an additional +1 status bonus to AC (+2 at 9th level, +3 at 17th level).</p>" },
+        "traits": { "value": [] },
+        "slug": "defensive-stance"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 3
+      }
+    },
+    "focused-devotion": {
+      "_id": "reignmaker-focused-devotion",
+      "name": "Taunt",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop attempts to demoralize enemies. Make an Intimidation check against the target's Will DC. On a success, the target becomes frightened 1; on a critical success, frightened 2.</p><p>Additionally, when using the Rally action, the troop reduces its frightened condition by an additional 1 (+2 at 9th level, +3 at 17th level).</p>" },
+        "traits": { "value": ["auditory", "mental", "fear"] },
+        "slug": "taunt"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 3
+      }
+    },
+    "sharpshooter": {
+      "_id": "reignmaker-sharpshooter",
+      "name": "Covering Fire",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop provides covering fire to suppress enemy movement. Make a ranged Strike; on a hit, the target also takes a -10 foot status penalty to all Speeds until the start of their next turn (-15 feet on a critical hit).</p><p>Additionally, the troop gains a +1 status bonus on ranged Strikes but suffers a -2 status penalty on melee Strikes (reduced to -1 at 9th level, removed at 15th level).</p>" },
+        "traits": { "value": ["ranged"] },
+        "slug": "covering-fire"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "increased-ammunition": {
+      "_id": "reignmaker-increased-ammunition",
+      "name": "Increased Ammunition",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop carries extra ammunition and supplies. They do not run out of ammunition during tactical encounters and can sustain prolonged engagements without resupply.</p>" },
+        "traits": { "value": [] },
+        "slug": "increased-ammunition"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "bloodied-but-unbroken": {
+      "_id": "reignmaker-bloodied-but-unbroken",
+      "name": "Bloodied but Unbroken",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>When the troop's HP is at or below its first threshold, it gains a +1 status bonus to AC and attack rolls (+2 at 10th level or higher). The troop fights harder when desperate.</p>" },
+        "traits": { "value": [] },
+        "slug": "bloodied-but-unbroken"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "reckless-flankers": {
+      "_id": "reignmaker-reckless-flankers",
+      "name": "Outflank",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop coordinates to exploit openings. Choose one enemy the troop threatens. Until the start of the troop's next turn, the troop and all allies flanking that enemy deal an additional 1d6 precision damage to it (2d6 at 10th level, 3d6 at 15th level).</p><p>Additionally, the troop fights with aggressive abandon. They take a -2 circumstance penalty to AC but gain a +1 circumstance bonus to attack rolls while adjacent to an enemy.</p>" },
+        "traits": { "value": [] },
+        "slug": "outflank"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "merciless": {
+      "_id": "reignmaker-merciless",
+      "name": "All-Out Assault",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop attacks with frenzied vigor. Make a melee Strike that deals one additional weapon damage die (+2 dice at 10th level, +3 dice at 15th level). This Strike counts as two attacks when calculating the troop's multiple attack penalty. On a critical failure, the troop becomes flat-footed until the start of its next turn.</p><p>Additionally, enemies within the troop's reach take a -2 circumstance penalty on checks to Disengage, and the DC to Step away from the troop is increased by 5.</p>" },
+        "traits": { "value": ["attack", "flourish"] },
+        "slug": "all-out-assault"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry"],
+        "minLevel": 5
+      }
+    },
+    "dirty-fighting": {
+      "_id": "reignmaker-dirty-fighting",
+      "name": "Dirty Fighting",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop uses trickery and unfair tactics. Make a Strike against a flat-footed enemy. On a critical success, the target also becomes clumsy 1 until the end of its next turn.</p>" },
+        "traits": { "value": ["attack"] },
+        "slug": "dirty-fighting"
+      },
+      "prerequisites": {
+        "armyTypes": ["infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "feint": {
+      "_id": "reignmaker-feint",
+      "name": "Feint",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop feints to create an opening. Make a Deception check against the target's Perception DC. On a success, the target is flat-footed against the troop's next attack this turn; on a critical success, flat-footed until the start of the troop's next turn.</p>" },
+        "traits": { "value": ["mental"] },
+        "slug": "feint"
+      },
+      "prerequisites": {
+        "armyTypes": ["infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "counterattack": {
+      "_id": "reignmaker-counterattack",
+      "name": "Counterattack",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> An engaged enemy attempts to Disengage, Rally, or use an action with the manipulate trait.</p><p><strong>Effect</strong> The troop makes a melee Strike against the triggering enemy. On a critical success, the target also becomes frightened 1. This Strike doesn't count toward the troop's multiple attack penalty, and the troop's multiple attack penalty doesn't apply to this Strike.</p>" },
+        "traits": { "value": [] },
+        "slug": "counterattack"
+      },
+      "prerequisites": {
+        "armyTypes": ["infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "false-retreat": {
+      "_id": "reignmaker-false-retreat",
+      "name": "False Retreat",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> The troop succeeds at a saving throw against a fear effect, or an enemy critically fails an Intimidation check against the troop.</p><p><strong>Effect</strong> The troop feigns defeat to deceive the enemy. Make a Deception check against the triggering enemy's Perception DC. On a success, the enemy is flat-footed until the start of your next turn and can't take reactions until then. On a critical success, the enemy is also off-guard to all your allies until the start of your next turn.</p>" },
+        "traits": { "value": ["mental"] },
+        "slug": "false-retreat"
+      },
+      "prerequisites": {
+        "armyTypes": ["infantry", "skirmisher"],
+        "minLevel": 5
+      }
+    },
+    "field-triage": {
+      "_id": "reignmaker-field-triage",
+      "name": "Battlefield Medicine",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "defensive",
+        "description": { "value": "<p>The troop tends to its wounded using the Treat Wounds DCs and healing amounts. Choose a DC based on the troop's level: DC 15 (any level), DC 20 (level 5+), DC 30 (level 10+), or DC 40 (level 15+). Attempt a Medicine check against that DC.</p><p><strong>Critical Success</strong> The troop regains 4d8 HP (DC 15), 4d8+10 HP (DC 20), 4d8+30 HP (DC 30), or 4d8+50 HP (DC 40).</p><p><strong>Success</strong> The troop regains 2d8 HP (DC 15), 2d8+10 HP (DC 20), 2d8+30 HP (DC 30), or 2d8+50 HP (DC 40).</p><p><strong>Critical Failure</strong> The troop takes 1d8 damage.</p><p>The troop can't use Battlefield Medicine on itself again for 1 hour.</p>" },
+        "traits": { "value": ["healing", "manipulate"] },
+        "slug": "battlefield-medicine"
+      },
+      "prerequisites": {
+        "armyTypes": ["infantry", "skirmisher"],
+        "minLevel": 6
+      }
+    },
+    "cavalry-experts": {
+      "_id": "reignmaker-cavalry-experts",
+      "name": "Cavalry Experts",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop's expert training with mounts improves their Overrun ability. The Overrun bonus increases to +2. At 12th level, the troop no longer suffers the save penalties from Overrun.</p>" },
+        "traits": { "value": [] },
+        "slug": "cavalry-experts"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry"],
+        "minLevel": 6
+      }
+    },
+    "ambush": {
+      "_id": "reignmaker-ambush",
+      "name": "Ambush",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop excels at surprise attacks. If the troop acts before all enemies in the first round of combat, it gains a +2 status bonus on its first Strike that round.</p>" },
+        "traits": { "value": [] },
+        "slug": "ambush"
+      },
+      "prerequisites": {
+        "armyTypes": ["skirmisher"],
+        "minLevel": 8
+      }
+    },
+    "opening-salvo": {
+      "_id": "reignmaker-opening-salvo",
+      "name": "Opening Salvo",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>If the troop rolls higher initiative than all enemies, it can Stride as a free action before its first turn begins.</p>" },
+        "traits": { "value": [] },
+        "slug": "opening-salvo"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "siege", "skirmisher"],
+        "minLevel": 8
+      }
+    },
+    "flaming-shot": {
+      "_id": "reignmaker-flaming-shot",
+      "name": "Flaming Shot",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The troop's ranged Strikes deal 1d6 persistent fire damage on a hit (2d6 at 10th level, 3d6 at 16th level).</p>" },
+        "traits": { "value": ["fire"] },
+        "slug": "flaming-shot"
+      },
+      "prerequisites": {
+        "armyTypes": ["cavalry", "infantry", "siege", "skirmisher"],
+        "minLevel": 9
+      }
+    },
+    "explosive-shot": {
+      "_id": "reignmaker-explosive-shot",
+      "name": "Overwhelming Bombardment",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The troop directs concentrated fire at a fortification or structure. Make a ranged Strike against the structure's AC. The collateral damage is 2d6 plus 1d6 for every 2 levels above 1st (7d6 at 11th when this becomes available). On a critical success, deal double damage to the structure and collateral damage to up to two creatures within or adjacent to it. On a success, deal normal damage to the structure and collateral damage to one creature within or adjacent to it. On a failure, deal half damage to the structure only.</p><p>Additionally, on a critical hit with a ranged Strike, the troop deals splash damage equal to half its level (minimum 1) to all creatures adjacent to the target.</p>" },
+        "traits": { "value": ["attack"] },
+        "slug": "overwhelming-bombardment"
+      },
+      "prerequisites": {
+        "armyTypes": ["siege"],
+        "minLevel": 11
+      }
+    }
+  },
+
+  "official": {
+    "_description": "Official PF2e troop abilities from published sources. Use as reference when designing custom tactics.",
+
+    "_heavy-cavalry": {
+      "_source": "NPC Core pg. 114",
+      "_level": 7,
+      "_type": "cavalry"
+    },
+    "join-the-fray": {
+      "_id": "official-join-the-fray",
+      "name": "Join the Fray",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The cavalry swings flails at each enemy within a 5-foot emanation (DC 22 basic Reflex save). Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d6+3 bludgeoning</li><li><strong>2 actions:</strong> 2d6+7 bludgeoning</li><li><strong>3 actions:</strong> 3d6+10 bludgeoning</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "join-the-fray"
+      },
+      "source": { "book": "NPC Core", "page": 114, "level": 7 }
+    },
+    "thunder-of-hooves": {
+      "_id": "official-thunder-of-hooves",
+      "name": "Thunder of Hooves",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The unit Strides, then attempts either an Athletics check to Trip all adjacent enemies, or an Intimidation check to Demoralize all enemies within 30 feet. Roll once and compare the result to each enemy's relevant DC.</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "thunder-of-hooves"
+      },
+      "source": { "book": "NPC Core", "page": 114, "level": 7 }
+    },
+    "mounted-troop": {
+      "_id": "official-mounted-troop",
+      "name": "Mounted Troop",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>Effects that target only animals or only humanoids might not work on the cavalry brigade, subject to the GM's discretion.</p>" },
+        "traits": { "value": [] },
+        "slug": "mounted-troop"
+      },
+      "source": { "book": "NPC Core", "page": 114, "level": 7 }
+    },
+
+    "_hellknight-cavalry": {
+      "_source": "Bestiary 3 pg. 43",
+      "_level": 8,
+      "_type": "cavalry"
+    },
+    "lance-charge": {
+      "_id": "official-lance-charge",
+      "name": "Lance Charge",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": { "value": "<p>The brigade Strides twice with a +10-foot circumstance bonus to Speed. After moving at least 10 feet, each enemy in a 10-foot emanation at the end of movement takes 3d8+14 piercing damage (DC 26 basic Reflex save).</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "lance-charge"
+      },
+      "source": { "book": "Bestiary 3", "page": 43, "level": 8 }
+    },
+    "arrow-volley": {
+      "_id": "official-arrow-volley",
+      "name": "Arrow Volley",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The Hellknights draw or reload longbows and launch a coordinated volley. Creates a 10-foot burst within 100 feet dealing 3d8 piercing damage (DC 23 basic Reflex save). The burst reduces to 5 feet when the troop has 2 or fewer segments.</p>" },
+        "traits": { "value": [] },
+        "slug": "arrow-volley"
+      },
+      "source": { "book": "Bestiary 3", "page": 43, "level": 8 }
+    },
+    "stab-from-the-saddle": {
+      "_id": "official-stab-from-the-saddle",
+      "name": "Stab from the Saddle",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>Coordinated lance attack against each enemy in a 10-foot emanation (DC 23 basic Reflex save). Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d6+3 piercing</li><li><strong>2 actions:</strong> 2d6+10 piercing</li><li><strong>3 actions:</strong> 3d6+14 piercing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "stab-from-the-saddle"
+      },
+      "source": { "book": "Bestiary 3", "page": 43, "level": 8 }
+    },
+    "trailblazing-stride": {
+      "_id": "official-trailblazing-stride",
+      "name": "Trailblazing Stride",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The brigade ignores difficult terrain while moving on land.</p>" },
+        "traits": { "value": [] },
+        "slug": "trailblazing-stride"
+      },
+      "source": { "book": "Bestiary 3", "page": 43, "level": 8 }
+    },
+
+    "_archer-regiment": {
+      "_source": "Battlecry!",
+      "_level": 12,
+      "_type": "skirmisher"
+    },
+    "rain-of-arrows": {
+      "_id": "official-rain-of-arrows",
+      "name": "Rain of Arrows",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The archer regiment fires their longbows in a coordinated volley. Choose either:</p><ul><li>A 15-foot burst within 200 feet that deals 4d8 piercing damage, or</li><li>A 10-foot burst within 100 feet that deals 6d8 piercing damage</li></ul><p>Targets make a DC 29 basic Reflex save. When reduced to 2 segments, both areas are reduced by 5 feet.</p>" },
+        "traits": { "value": [] },
+        "slug": "rain-of-arrows"
+      },
+      "source": { "book": "Battlecry!", "level": 12 }
+    },
+    "dagger-defense": {
+      "_id": "official-dagger-defense",
+      "name": "Dagger Defense",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>The archer regiment draws daggers to attack close-range enemies. Each enemy in a 5-foot emanation must attempt a DC 29 basic Reflex save. The archer regiment gains a +1 circumstance bonus to AC until the beginning of their next turn.</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 2d4+2 piercing</li><li><strong>2 actions:</strong> 4d4+12 piercing</li><li><strong>3 actions:</strong> 4d4+15 piercing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "dagger-defense"
+      },
+      "source": { "book": "Battlecry!", "level": 12 }
+    },
+    "drilled-in-formations": {
+      "_id": "official-drilled-in-formations",
+      "name": "Drilled in Formations",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "interaction",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The unit uses the Change Formation ability. The unit typically knows multiple formations such as loose, marching column, or wedge.</p>" },
+        "traits": { "value": [] },
+        "slug": "drilled-in-formations"
+      },
+      "source": { "book": "Battlecry!", "level": 6 }
+    },
+
+    "_phalanx-formation": {
+      "_source": "NPC Core pg. 113",
+      "_level": 6,
+      "_type": "infantry"
+    },
+    "hurl-javelins": {
+      "_id": "official-hurl-javelins",
+      "name": "Hurl Javelins",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>Members throw spears in a volley. Each creature in a 10-foot burst within 30 feet must make a DC 21 basic Reflex save, taking 2d6+5 piercing damage. When reduced to 2 or fewer segments, the burst area shrinks to 5 feet.</p>" },
+        "traits": { "value": [] },
+        "slug": "hurl-javelins"
+      },
+      "source": { "book": "NPC Core", "page": 113, "level": 6 }
+    },
+    "spears-out": {
+      "_id": "official-spears-out",
+      "name": "Spears Out!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The phalanx thrusts longspears in all directions at enemies within a 10-foot emanation. All foes attempt a DC 21 basic Reflex save.</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d8+2 piercing</li><li><strong>2 actions:</strong> 2d8+5 piercing</li><li><strong>3 actions:</strong> 3d8+5 piercing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "spears-out"
+      },
+      "source": { "book": "NPC Core", "page": 113, "level": 6 }
+    },
+    "shields-up": {
+      "_id": "official-shields-up",
+      "name": "Shields Up!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "defensive",
+        "description": { "value": "<p>The formation raises shields defensively, gaining a +2 circumstance bonus to AC and Reflex saves until their next turn starts. This bonus increases to +3 against physical ranged attacks.</p>" },
+        "traits": { "value": [] },
+        "slug": "shields-up"
+      },
+      "source": { "book": "NPC Core", "page": 113, "level": 6 }
+    },
+
+    "_line-infantry": {
+      "_source": "NPC Core pg. 112",
+      "_level": 6,
+      "_type": "infantry"
+    },
+    "bolt-salvo": {
+      "_id": "official-bolt-salvo",
+      "name": "Bolt Salvo",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": { "value": "<p>The infantry launches a crossbow salvo in a 10-foot burst within 120 feet, dealing 2d8 piercing damage (DC 21 basic Reflex save). At 2 or fewer segments, burst reduces to 5 feet.</p>" },
+        "traits": { "value": [] },
+        "slug": "bolt-salvo"
+      },
+      "source": { "book": "NPC Core", "page": 112, "level": 6 }
+    },
+    "clash-of-steel": {
+      "_id": "official-clash-of-steel",
+      "name": "Clash of Steel",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>Melee attack against all enemies in a 5-foot emanation (DC 21 basic Reflex save).</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d6+2 slashing</li><li><strong>2 actions:</strong> 2d6+7 slashing</li><li><strong>3 actions:</strong> 3d6+10 slashing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "clash-of-steel"
+      },
+      "source": { "book": "NPC Core", "page": 112, "level": 6 }
+    },
+    "no-retreat": {
+      "_id": "official-no-retreat",
+      "name": "No Retreat",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>When the troop would be forced to move, reduce the distance by 5 feet. The fleeing condition becomes slowed 2 instead for this troop.</p>" },
+        "traits": { "value": [] },
+        "slug": "no-retreat"
+      },
+      "source": { "book": "NPC Core", "page": 112, "level": 6 }
+    },
+
+    "_city-guard-squadron": {
+      "_source": "NPC Core pg. 111",
+      "_level": 5,
+      "_type": "infantry"
+    },
+    "lower-halberds": {
+      "_id": "official-lower-halberds",
+      "name": "Lower Halberds!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>Coordinated melee attack against all enemies in a 10-foot emanation (DC 19 basic Reflex save).</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d10 piercing or slashing</li><li><strong>2 actions:</strong> 1d10+7 piercing or slashing</li><li><strong>3 actions:</strong> 1d10+10 piercing or slashing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "lower-halberds"
+      },
+      "source": { "book": "NPC Core", "page": 111, "level": 5 }
+    },
+    "shoot-crossbows": {
+      "_id": "official-shoot-crossbows",
+      "name": "Shoot Crossbows!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>Launch a crossbow volley in a 10-foot burst within 120 feet, dealing 2d8 piercing damage (DC 19 basic Reflex save). Reduces to 5-foot burst at 2 segments or fewer.</p>" },
+        "traits": { "value": [] },
+        "slug": "shoot-crossbows"
+      },
+      "source": { "book": "NPC Core", "page": 111, "level": 5 }
+    },
+    "seek-quarry": {
+      "_id": "official-seek-quarry",
+      "name": "Seek Quarry",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>By spending 1 minute to designate a single creature they can physically describe, the guards gain a +2 circumstance bonus to Perception checks against that quarry.</p>" },
+        "traits": { "value": [] },
+        "slug": "seek-quarry"
+      },
+      "source": { "book": "NPC Core", "page": 111, "level": 5 }
+    },
+    "city-passage": {
+      "_id": "official-city-passage",
+      "name": "City Passage",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The guards ignore difficult terrain caused by crowds or from movement through narrow spaces such as alleyways.</p>" },
+        "traits": { "value": [] },
+        "slug": "city-passage"
+      },
+      "source": { "book": "NPC Core", "page": 111, "level": 5 }
+    },
+
+    "_conscript-squad": {
+      "_source": "NPC Core pg. 109",
+      "_level": 3,
+      "_type": "infantry"
+    },
+    "indiscriminate-assault": {
+      "_id": "official-indiscriminate-assault",
+      "name": "Indiscriminate Assault",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The squad lashes out at all creatures within 5 feet using modified farm implements, making no distinction between allies and enemies. A DC 17 basic Reflex save applies to all targets in the area.</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d8 piercing</li><li><strong>2 actions:</strong> 1d8+4 piercing</li><li><strong>3 actions:</strong> 2d8+4 piercing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "indiscriminate-assault"
+      },
+      "source": { "book": "NPC Core", "page": 109, "level": 3 }
+    },
+    "untrained-rabble": {
+      "_id": "official-untrained-rabble",
+      "name": "Untrained Rabble",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>At the start of each turn, the squad must succeed at a DC 10 flat check or become confused for that turn.</p>" },
+        "traits": { "value": [] },
+        "slug": "untrained-rabble"
+      },
+      "source": { "book": "NPC Core", "page": 109, "level": 3 }
+    },
+
+    "_skeleton-infantry": {
+      "_source": "Bestiary 3 pg. 239",
+      "_level": 11,
+      "_type": "infantry"
+    },
+    "lower-spears": {
+      "_id": "official-lower-spears",
+      "name": "Lower Spears!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>Coordinated longspear attack against nearby enemies (DC 27 basic Reflex save).</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 2d8 piercing</li><li><strong>2 actions:</strong> 3d8+8 piercing</li><li><strong>3 actions:</strong> 4d8+8 piercing</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "lower-spears"
+      },
+      "source": { "book": "Bestiary 3", "page": 239, "level": 11 }
+    },
+    "form-a-phalanx": {
+      "_id": "official-form-a-phalanx",
+      "name": "Form a Phalanx",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "defensive",
+        "description": { "value": "<p>Many of the skeletons raise their shields to protect others. The infantry gains a +2 circumstance bonus to AC until the start of their next turn.</p>" },
+        "traits": { "value": [] },
+        "slug": "form-a-phalanx"
+      },
+      "source": { "book": "Bestiary 3", "page": 239, "level": 11 }
+    },
+    "phalanx-charge": {
+      "_id": "official-phalanx-charge",
+      "name": "Phalanx Charge",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Requirements</strong> The infantry is in phalanx formation.</p><p>The infantry Strides in a straight line toward an enemy, then uses Lower Spears! dealing 3d8+8 damage. Creatures that fail their save are also knocked prone.</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "phalanx-charge"
+      },
+      "source": { "book": "Bestiary 3", "page": 239, "level": 11 }
+    },
+
+    "_shambler-troop": {
+      "_source": "Bestiary 3 pg. 302",
+      "_level": 4,
+      "_type": "infantry"
+    },
+    "shambling-onslaught": {
+      "_id": "official-shambling-onslaught",
+      "name": "Shambling Onslaught",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The shambler troop attacks all creatures in its squares or within 5 feet (DC 18 basic Reflex save).</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 2d6+5 bludgeoning</li><li><strong>2 actions:</strong> 2d6+9 bludgeoning</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "shambling-onslaught"
+      },
+      "source": { "book": "Bestiary 3", "page": 302, "level": 4 }
+    },
+    "grave-tide": {
+      "_id": "official-grave-tide",
+      "name": "Grave Tide",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The troop can move through other creatures' spaces, and other creatures can move through its spaces. The troop's squares count as difficult terrain to other creatures.</p>" },
+        "traits": { "value": [] },
+        "slug": "grave-tide"
+      },
+      "source": { "book": "Bestiary 3", "page": 302, "level": 4 }
+    },
+    "slow-zombie": {
+      "_id": "official-slow-zombie",
+      "name": "Slow",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The troop is permanently slowed 1 and can't use reactions.</p>" },
+        "traits": { "value": [] },
+        "slug": "slow-zombie"
+      },
+      "source": { "book": "Bestiary 3", "page": 302, "level": 4 }
+    },
+
+    "_cultist-troop": {
+      "_source": "Pathfinder #194",
+      "_level": 5,
+      "_type": "infantry"
+    },
+    "wild-swing": {
+      "_id": "official-wild-swing",
+      "name": "Wild Swing",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Frequency</strong> once per round</p><p>The cultists swing various weapons at adjacent enemies while taking self-inflicted damage. All enemy targets make a DC 22 basic Reflex save.</p><p>Damage scales with actions spent:</p><ul><li><strong>1 action:</strong> 1d12+1 slashing to enemies; 1d4 slashing to troop</li><li><strong>2 actions:</strong> 2d12+1 slashing to enemies; 1d4+2 slashing to troop</li><li><strong>3 actions:</strong> 2d12+5 slashing to enemies; 2d4 slashing to troop</li></ul>" },
+        "traits": { "value": [] },
+        "slug": "wild-swing"
+      },
+      "source": { "book": "Pathfinder #194", "level": 5 }
+    },
+
+    "_first-class-infantry": {
+      "_source": "Battlecry!",
+      "_level": 13,
+      "_type": "infantry"
+    },
+    "first-class-charge": {
+      "_id": "official-first-class-charge",
+      "name": "First-Class Charge",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The infantry Strides up to double its Speed. Enemies within a 5-foot emanation at the end of the movement take 2d6+5 slashing damage (DC 30 basic Reflex save).</p>" },
+        "traits": { "value": ["move"] },
+        "slug": "first-class-charge"
+      },
+      "source": { "book": "Battlecry!", "level": 13 }
+    },
+    "no-retreat-elite": {
+      "_id": "official-no-retreat-elite",
+      "name": "No Retreat (Elite)",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>When the troop would be forced to move, reduce the distance by 10 feet (instead of 5). The fleeing condition becomes slowed 2 instead for this troop.</p>" },
+        "traits": { "value": [] },
+        "slug": "no-retreat-elite"
+      },
+      "source": { "book": "Battlecry!", "level": 13 }
+    },
+
+    "_support-abilities": {
+      "_description": "Abilities from support NPCs (Standard Bearer, Drill Sergeant) that can inspire troop designs"
+    },
+    "inspiring-banner": {
+      "_id": "official-inspiring-banner",
+      "name": "Inspiring Banner",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Aura</strong> 60 feet (emotion, mental, visual)</p><p>Allies who can see the battle standard gain a +1 status bonus to initiative and saves against fear effects. Each time an affected creature gains the frightened condition, reduce the frightened value by 1.</p>" },
+        "traits": { "value": ["aura", "emotion", "mental", "visual"] },
+        "slug": "inspiring-banner"
+      },
+      "source": { "book": "NPC Core", "page": 110, "level": 4, "_npc": "Standard Bearer" }
+    },
+    "signal-the-advance": {
+      "_id": "official-signal-the-advance",
+      "name": "Signal the Advance!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "interaction",
+        "description": { "value": "<p>Each ally within 60 feet who can see the banner can use a reaction to Stand, Step, or Stride.</p>" },
+        "traits": { "value": ["mental", "visual"] },
+        "slug": "signal-the-advance"
+      },
+      "source": { "book": "NPC Core", "page": 110, "level": 4, "_npc": "Standard Bearer" }
+    },
+    "stay-in-the-fight": {
+      "_id": "official-stay-in-the-fight",
+      "name": "Stay in the Fight!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "defensive",
+        "description": { "value": "<p>Grants 10 temporary Hit Points to all allies within 60 feet who can see the banner. These temporary HP last for 1 minute.</p>" },
+        "traits": { "value": ["auditory", "mental"] },
+        "slug": "stay-in-the-fight"
+      },
+      "source": { "book": "NPC Core", "page": 110, "level": 4, "_npc": "Standard Bearer" }
+    },
+    "commanding-presence": {
+      "_id": "official-commanding-presence",
+      "name": "Commanding Presence",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Aura</strong> 60 feet (emotion, mental, visual)</p><p>Allies starting their turn in range gain temporary Hit Points equal to the troop's level (minimum 5), lasting until the start of their next turn.</p>" },
+        "traits": { "value": ["aura", "emotion", "mental", "visual"] },
+        "slug": "commanding-presence"
+      },
+      "source": { "book": "NPC Core", "page": 115, "level": 8, "_npc": "Drill Sergeant" }
+    },
+    "keep-up-with-me": {
+      "_id": "official-keep-up-with-me",
+      "name": "Keep Up With Me!",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Requirements</strong> The troop's last action was a successful Strike.</p><p>One ally within 30 feet gains a +3 status bonus to their next Strike before the troop's next turn (or +3 to DC for troop offensive activities).</p>" },
+        "traits": { "value": ["auditory", "emotion", "linguistic", "mental"] },
+        "slug": "keep-up-with-me"
+      },
+      "source": { "book": "NPC Core", "page": 115, "level": 8, "_npc": "Drill Sergeant" }
+    }
+  }
+}

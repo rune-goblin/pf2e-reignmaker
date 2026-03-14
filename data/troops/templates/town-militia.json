@@ -1,0 +1,99 @@
+{
+  "name": "Town Militia",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 4 },
+      "dex": { "mod": 4 },
+      "con": { "mod": 6 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 6 },
+      "cha": { "mod": 4 }
+    },
+    "attributes": {
+      "ac": { "value": 24 },
+      "hp": { "max": 143, "value": 143, "details": "Thresholds 95 (12 squares), 47 (8 squares)" },
+      "speed": { "value": 25, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 6 },
+        { "type": "splash-damage", "value": 5 }
+      ]
+    },
+    "details": {
+      "level": { "value": 7 },
+      "publicNotes": "<p>Local guards and citizens organized into an impromptu defensive force. Though lacking in mobility, their determination to protect their home makes them resistant to routing.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 18 },
+      "reflex": { "value": 12 },
+      "will": { "value": 18 }
+    },
+    "perception": { "mod": 15 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "common",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "toughened-soldiers" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 95 (12 squares), 47 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Hold the Line",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The militia has trained to maintain position even against overwhelming opponents. They gain a +1 status bonus on Morale checks to resist rout, and their Rout Threshold is reduced to 1/4 of their total Hit Points (rounded up).</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Town Militia",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.5,
+        "damageBenchmark": 0.5,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

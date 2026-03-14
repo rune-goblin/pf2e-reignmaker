@@ -1,0 +1,101 @@
+{
+  "name": "Bandit Irregulars",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 6 },
+      "dex": { "mod": 6 },
+      "con": { "mod": 4 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 2 },
+      "cha": { "mod": 2 }
+    },
+    "attributes": {
+      "ac": { "value": 24 },
+      "hp": { "max": 115, "value": 115, "details": "Thresholds 76 (12 squares), 38 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 6 },
+        { "type": "splash-damage", "value": 5 }
+      ]
+    },
+    "details": {
+      "level": { "value": 7 },
+      "publicNotes": "<p>A mob of bandits and mercenaries fighting with more cunning than discipline. Their haphazard movements make them hard to hit at range but leave them vulnerable to demoralization.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 15 },
+      "reflex": { "value": 18 },
+      "will": { "value": 12 }
+    },
+    "perception": { "mod": 15 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "common",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "dirty-fighting" },
+    { "$ref": "all-out-assault" },
+    { "$ref": "reactive-strike" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 76 (12 squares), 38 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Unpredictable Movement",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The irregulars move about in a haphazard manner that makes them hard to target at range. All ranged attacks against the Bandit Irregulars suffer a -2 circumstance penalty.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Bandit Irregulars",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.5,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

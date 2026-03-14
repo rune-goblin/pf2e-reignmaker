@@ -1,0 +1,118 @@
+{
+  "type": "skill",
+  "family": "Combat & Training",
+  "description": "Tier progression for Combat & Training",
+  "tiers": [
+    {
+      "id": "gymnasium",
+      "name": "Sparring Ring",
+      "description": "Simple open-air ring for combat practice and weapons training",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "athletics",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Athletics"
+      ]
+    },
+    {
+      "id": "training-yard",
+      "name": "Training Yard",
+      "description": "Organized military training ground for disciplined forces",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "athletics",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "acrobatics",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Athletics, Acrobatics"
+      ]
+    },
+    {
+      "id": "warriors-hall",
+      "name": "Champions Hall",
+      "description": "Prestigious facility dedicated to elite warriors and champions",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "athletics",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "acrobatics",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "intimidation",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Athletics, Acrobatics, Intimidation",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "military-academy",
+      "name": "Grand Coliseum",
+      "description": "Magnificent arena and training center for legendary warriors",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "athletics",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "acrobatics",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "intimidation",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Athletics, Acrobatics, Intimidation",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)",
+        "Leaders may retrain class feats: Fighter, Barbarian, Monk, Guardian, Commander"
+      ]
+    }
+  ],
+  "skills": [
+    "Athletics",
+    "Acrobatics",
+    "Intimidation"
+  ]
+}

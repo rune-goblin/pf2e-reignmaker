@@ -1,0 +1,114 @@
+{
+  "name": "Ranger Hunters",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 5 },
+      "dex": { "mod": 5 },
+      "con": { "mod": 5 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 7 },
+      "cha": { "mod": 2 }
+    },
+    "attributes": {
+      "ac": { "value": 23 },
+      "hp": { "max": 75, "value": 75, "details": "Thresholds 50 (12 squares), 25 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 5 },
+        { "type": "splash-damage", "value": 4 }
+      ]
+    },
+    "details": {
+      "level": { "value": 6 },
+      "publicNotes": "<p>Expert hunters and trackers who excel at hit-and-run tactics in wilderness terrain.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 14 },
+      "reflex": { "value": 17 },
+      "will": { "value": 17 }
+    },
+    "perception": { "mod": 17 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "live-off-the-land" },
+    { "$ref": "sharpshooter" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 50 (12 squares), 25 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Terrain Master",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The Ranger Hunters ignore difficult terrain in forest and hill terrain and gain +1 status bonus on Stealth checks in those areas.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Precision Strike",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The rangers make a ranged Strike targeting weak points. On a hit, the target takes additional damage equal to half the rangers' level (minimum 1) and becomes flat-footed until the end of its next turn.</p>" },
+        "traits": { "value": ["ranged"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Ranger Hunters",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "skirmisher",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Ranged Volley",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing",
+        "isRanged": true
+      }
+    }
+  }
+}

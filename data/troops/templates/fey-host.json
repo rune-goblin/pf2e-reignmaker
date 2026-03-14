@@ -1,0 +1,128 @@
+{
+  "name": "Fey Host",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 9 },
+      "dex": { "mod": 10 },
+      "con": { "mod": 6 },
+      "int": { "mod": 8 },
+      "wis": { "mod": 9 },
+      "cha": { "mod": 10 }
+    },
+    "attributes": {
+      "ac": { "value": 38 },
+      "hp": { "max": 295, "value": 295, "details": "Thresholds 196 (12 squares), 98 (8 squares)" },
+      "speed": { "value": 35, "otherSpeeds": [{ "type": "fly", "value": 35 }], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 12 },
+        { "type": "splash-damage", "value": 9 },
+        { "type": "cold-iron", "value": 10 }
+      ]
+    },
+    "details": {
+      "level": { "value": 16 },
+      "publicNotes": "<p>A mercurial host of fey creatures that fight with illusions, enchantments, and surprising magical attacks.</p>",
+      "languages": { "value": ["common", "sylvan", "aklo"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 28 },
+      "reflex": { "value": 33 },
+      "will": { "value": 30 }
+    },
+    "perception": { "mod": 28, "senses": [{ "type": "low-light-vision" }] },
+    "traits": {
+      "value": ["troop", "fey"],
+      "rarity": "rare",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "low-light-vision" },
+    { "$ref": "flight" },
+    { "$ref": "feint" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 196 (12 squares), 98 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Fey Glamour",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p>The Fey Host is protected by illusory magic. All attacks against them have a 20% miss chance unless the attacker can see through illusions.</p>" },
+        "traits": { "value": ["illusion"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Captivating Performance",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The fey unleash an enchanting display. All enemies within 60 feet must attempt a Will save or become fascinated until the end of their next turn (stunned 1 on a critical failure). A creature that succeeds is temporarily immune for 1 hour.</p>" },
+        "traits": { "value": ["enchantment", "mental", "visual"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Wild Hunt",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 3 },
+        "category": "offensive",
+        "description": { "value": "<p>The Fey Host declares a Wild Hunt against a single target army. Until the end of the encounter, the Fey Host gains a +2 status bonus to attacks and damage against the hunted army, and the hunted army cannot benefit from concealment or invisibility against the Fey Host.</p>" },
+        "traits": { "value": ["enchantment"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Fey Host",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "cavalry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Lance Charge",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.75,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

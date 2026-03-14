@@ -1,0 +1,117 @@
+{
+  "type": "skill",
+  "family": "Civic & Governance",
+  "description": "Tier progression for Civic & Governance",
+  "tiers": [
+    {
+      "id": "town-hall",
+      "name": "Meeting House",
+      "description": "A humble hall where townsfolk gather to settle disputes and make communal decisions",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Society"
+      ]
+    },
+    {
+      "id": "city-hall",
+      "name": "Town Hall",
+      "description": "The organized seat of local leadership, housing records, officials, and civic meetings",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 1
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "Supports: Society, Diplomacy"
+      ]
+    },
+    {
+      "id": "diplomatic-quarter",
+      "name": "Council Chambers",
+      "description": "A stately building where magistrates and advisors convene to deliberate policy and law",
+      "cost": {
+        "lumber": 3,
+        "stone": 5,
+        "ore": 4
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 2
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "deception",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "Supports: Society, Diplomacy, Deception",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    },
+    {
+      "id": "grand-forum",
+      "name": "Royal Court",
+      "description": "The grand seat of royal authority, where nobles gather to debate governance, justice, and decree",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "gameEffects": [
+        {
+          "type": "settlementSkillBonus",
+          "skill": "society",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "diplomacy",
+          "value": 3
+        },
+        {
+          "type": "settlementSkillBonus",
+          "skill": "deception",
+          "value": 3
+        }
+      ],
+      "manualEffects": [
+        "Supports: Society, Diplomacy, Deception",
+        "Reroll 1 failed skill check per turn",
+        "Leaders may retrain skill proficiencies and skill feats for supported skills (1 week downtime)"
+      ]
+    }
+  ],
+  "skills": [
+    "Society",
+    "Diplomacy",
+    "Deception"
+  ]
+}

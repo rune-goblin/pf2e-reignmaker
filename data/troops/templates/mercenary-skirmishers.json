@@ -1,0 +1,102 @@
+{
+  "name": "Mercenary Skirmishers",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 7 },
+      "dex": { "mod": 8 },
+      "con": { "mod": 5 },
+      "int": { "mod": 5 },
+      "wis": { "mod": 7 },
+      "cha": { "mod": 5 }
+    },
+    "attributes": {
+      "ac": { "value": 33 },
+      "hp": { "max": 175, "value": 175, "details": "Thresholds 116 (12 squares), 58 (8 squares)" },
+      "speed": { "value": 35, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 10 },
+        { "type": "splash-damage", "value": 7 }
+      ]
+    },
+    "details": {
+      "level": { "value": 12 },
+      "publicNotes": "<p>Veteran mercenaries skilled in both ranged and melee combat, capable of adapting to any battlefield situation.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 22 },
+      "reflex": { "value": 27 },
+      "will": { "value": 22 }
+    },
+    "perception": { "mod": 22 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "feint" },
+    { "$ref": "all-out-assault" },
+    { "$ref": "covering-fire" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 116 (12 squares), 58 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Versatile Tactics",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The Mercenary Skirmishers do not suffer the Sharpshooter melee penalty and can switch freely between ranged and melee combat without penalty.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Mercenary Skirmishers",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "skirmisher",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Ranged Volley",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing",
+        "isRanged": true
+      }
+    }
+  }
+}

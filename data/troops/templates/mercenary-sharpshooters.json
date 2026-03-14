@@ -1,0 +1,89 @@
+{
+  "name": "Mercenary Sharpshooters",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 5 },
+      "dex": { "mod": 8 },
+      "con": { "mod": 5 },
+      "int": { "mod": 5 },
+      "wis": { "mod": 7 },
+      "cha": { "mod": 5 }
+    },
+    "attributes": {
+      "ac": { "value": 30 },
+      "hp": { "max": 151, "value": 151, "details": "Thresholds 100 (12 squares), 50 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 9 },
+        { "type": "splash-damage", "value": 7 }
+      ]
+    },
+    "details": {
+      "level": { "value": 11 },
+      "publicNotes": "<p>Elite crossbow specialists who have trained together for years, combining accurate fire with disciplined reloading techniques.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 21 },
+      "reflex": { "value": 26 },
+      "will": { "value": 24 }
+    },
+    "perception": { "mod": 21 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "sharpshooter" },
+    { "$ref": "increased-ammunition" },
+    { "$ref": "covering-fire" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 100 (12 squares), 50 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Mercenary Sharpshooters",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "skirmisher",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Ranged Volley",
+        "attackBenchmark": 1.0,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing",
+        "isRanged": true
+      }
+    }
+  }
+}

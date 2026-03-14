@@ -1,0 +1,1014 @@
+{
+  "prototypeToken": {
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": 0,
+    "sight": {
+      "color": null,
+      "enabled": false,
+      "range": 0,
+      "angle": 360,
+      "visionMode": "basic",
+      "attenuation": 0.1,
+      "brightness": 0,
+      "saturation": 0,
+      "contrast": 0
+    },
+    "flags": {
+      "pf2e": {
+        "linkToActorSize": false,
+        "autoscale": false
+      }
+    },
+    "height": 1,
+    "width": 1,
+    "name": "Wyvern Flight",
+    "actorLink": true,
+    "appendNumber": false,
+    "prependAdjective": false,
+    "texture": {
+      "src": "modules/pf2e-kingmaker/assets/actor-tokens/party/creatures/purple-04.webp",
+      "scaleX": 1.5,
+      "scaleY": 1.5,
+      "offsetX": 0,
+      "offsetY": 0,
+      "rotation": 0,
+      "tint": "#ffffff",
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "fit": "contain",
+      "alphaThreshold": 0.75
+    },
+    "lockRotation": false,
+    "rotation": 0,
+    "alpha": 1,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "bar2": {
+      "attribute": null
+    },
+    "light": {
+      "alpha": 0.5,
+      "angle": 360,
+      "bright": 0,
+      "coloration": 1,
+      "dim": 0,
+      "attenuation": 0.5,
+      "luminosity": 0.5,
+      "saturation": 0,
+      "contrast": 0,
+      "shadows": 0,
+      "animation": {
+        "type": null,
+        "speed": 5,
+        "intensity": 5,
+        "reverse": false
+      },
+      "darkness": {
+        "min": 0,
+        "max": 1
+      },
+      "color": null,
+      "negative": false,
+      "priority": 0
+    },
+    "detectionModes": [],
+    "randomImg": false,
+    "occludable": {
+      "radius": 0
+    },
+    "ring": {
+      "enabled": false,
+      "colors": {
+        "ring": null,
+        "background": null
+      },
+      "effects": 1,
+      "subject": {
+        "scale": 1,
+        "texture": null
+      }
+    },
+    "turnMarker": {
+      "mode": 1,
+      "animation": null,
+      "src": null,
+      "disposition": false
+    },
+    "movementAction": null
+  },
+  "folder": "9foRrkueLg3QnhLj",
+  "name": "Wyvern Flight",
+  "type": "army",
+  "effects": [],
+  "system": {
+    "ac": {
+      "value": 33,
+      "potency": 0
+    },
+    "attributes": {
+      "hp": {
+        "value": 4,
+        "max": 4,
+        "routThreshold": 3,
+        "temp": 0
+      }
+    },
+    "details": {
+      "level": {
+        "value": 12
+      },
+      "description": "<p>This flight of wyverns has been trained to obey orders in battle.</p>\n<p><em><strong>Note</strong>: In Pathfinder: Kingmaker, the Wyvern Flight has a melee strike bonus of +18. This has been assumed to be an error, and substituted with +26, the default value for a level 12 army.</em></p>"
+    },
+    "traits": {
+      "rarity": "common",
+      "type": "cavalry",
+      "value": []
+    },
+    "consumption": 1,
+    "recruitmentDC": 15,
+    "resources": {
+      "potions": {
+        "value": 0
+      },
+      "ammunition": {
+        "value": 5
+      }
+    },
+    "saves": {
+      "maneuver": 25,
+      "morale": 17
+    },
+    "weapons": {
+      "melee": {
+        "name": "Fangs, claws, and stingers",
+        "potency": 0
+      },
+      "ranged": null
+    },
+    "_migration": {
+      "version": 0.953,
+      "previous": {
+        "schema": 0.926,
+        "foundry": "13.351",
+        "system": "7.7.3"
+      }
+    },
+    "scouting": 23
+  },
+  "img": "modules/pf2e-kingmaker/assets/actor-tokens/party/creatures/purple-04.webp",
+  "items": [
+    {
+      "_id": "Jd1g3ovpiC39CYRk",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Rally",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army's leaders attempt to bolster the soldiers' morale and fight back the effects of fear and panic. Attempt a Morale check against a target enemy army of your choice.</p>\n<p><strong>Critical Success</strong> If your army is @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}, it loses the routed condition. Reduce your army's @UUID[Compendium.pf2e.kingmaker-features.Item.7LMDwpVijK7x5Jst]{Shaken} condition by 2.</p>\n<p><strong>Success</strong> Reduce your army's shaken condition by 1.</p>\n<p><strong>Critical Failure</strong> Your attempt to rally backfires—increase your army's shaken condition by 1.</p>"
+        },
+        "rules": [],
+        "slug": "rally",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "morale"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.8XXylMGJuqe1ozMk",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "1egfYGFDnAX5opwc",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/ThreeActions.webp",
+      "name": "Retreat",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p><strong>Prerequisite</strong> Your army is not @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged}.</p>\n<p>Your army tries to escape from the battlefield.</p>\n<p>If your army is already @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant}, it flees the battlefield, is no longer part of the war encounter, and becomes @UUID[Compendium.pf2e.kingmaker-features.Item.aZImSBBmTHff2POP]{Routed}. </p>\n<p>Otherwise, your army gains the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition.</p>"
+        },
+        "rules": [],
+        "slug": "retreat",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 3
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.IhjlbJinff1wUSjL",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "A5deiJajssYXsGeB",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "Disengage",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attempts to disengage from enemy armies to put some distance between itself and the enemy.</p>\n<p>Attempt a Maneuver check against each army your army is @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with.</p>\n<p><strong>Critical Success</strong> Your army is no longer engaged with the target army. In addition, your army is automatically no longer engaged with any armies you haven't yet rolled a Maneuver check against during this war action.</p>\n<p><strong>Success</strong> Your army breaks free and is no longer engaged with the target army.</p>\n<p><strong>Failure</strong> Your army remains engaged with the target army.</p>\n<p><strong>Critical Failure</strong> Your army remains engaged with the target army and, for the remainder of this turn, your army cannot attempt to disengage from any army with which it is still engaged.</p>"
+        },
+        "rules": [],
+        "slug": "disengage",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "maneuver"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 2
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.Pu5bptxLrKFyEzFh",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "pF7BiYB0G1hNsXek",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Guard",
+      "system": {
+        "description": {
+          "value": "",
+          "gm": ""
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": null,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "campaign": "kingmaker",
+        "category": "kingdom-activity",
+        "level": {
+          "value": 1
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.phtwOol1wETryF7b",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "AutD88eYafZX1wQW",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Battle",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attacks an enemy army with a Strike against the enemy army's AC. You can do so with a melee Strike only if you are @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with the target army. Otherwise, you must use a ranged Strike.</p>\n<p>An army can attempt a maximum of 5 ranged Strikes per war encounter (unless it has the @UUID[Compendium.pf2e.kingmaker-features.Item.DrUT5sE0EuU5dtPa]{Increased Ammunition} tactic). As with any attack, multiple Strikes in a single round suffer a multiple attack penalty.</p>\n<p>A siege engine can use the Battle action to attack and damage a fortification.</p>\n<p><strong>Critical Success</strong> You deal 2 points of damage to the army.</p>\n<p><strong>Success</strong> You deal 1 point of damage to the army.</p>"
+        },
+        "rules": [],
+        "slug": "battle",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "attack"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.qCxyuNhzaaYlYBum",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "_id": "rGxlncNMXLVMXZ6s",
+      "folder": "Vqp8b64uH35zkncy",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "name": "Advance",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>Your army attempts to close the distance with a target enemy army it is not engaged with by attempting a Maneuver check.</p>\n<p><strong>Critical Success</strong> The enemy army becomes @UUID[Compendium.pf2e.kingmaker-features.Item.2IqM1XHELKwARAx1]{Engaged} with your army, even if it previously had the @UUID[Compendium.pf2e.kingmaker-features.Item.8upne4E6Q7Da5T5w]{Distant} condition (in which case it loses that condition and becomes engaged).</p>\n<p><strong>Success</strong> If the target army is distant, it loses that condition; otherwise, it becomes engaged.</p>\n<p><strong>Failure</strong> Your army's attempt to advance fails.</p>\n<p><strong>Critical Failure</strong> Your army's attempt to advance fails, and it becomes disorganized, becoming @UUID[Compendium.pf2e.kingmaker-features.Item.oVhkdym3D6TiTbrN]{Mired 1} until the start of its next turn.</p>"
+        },
+        "rules": [],
+        "slug": "advance",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "maneuver"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-war-action",
+        "actionType": {
+          "value": "action"
+        },
+        "actions": {
+          "value": 1
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.wHoXoyci1lddRR2R",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "jZWW6y5VjVRbbU7t",
+      "name": "Flight",
+      "type": "campaignFeature",
+      "effects": [],
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The Wyvern Flight ignores all ground- based difficult terrain and cannot become mired by effects that can be escaped by flight. When they use the @UUID[Compendium.pf2e.kingmaker-features.Item.Pu5bptxLrKFyEzFh]{Disengage} action against armies that can’t fly, their check result is improved one degree. Armies that lack the ability to fly suffer a –2 circumstance penalty on Advance actions against a Wyvern Flight.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "0",
+        "level": {
+          "value": 12
+        }
+      },
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "sort": 100000,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "compendiumSource": "Item.FG2BifRmaZ54fxhS",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "rTgVHaEGaXgWZGA9",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "jZWW6y5VjVRbbU7t",
+      "name": "Wyvern Venom",
+      "type": "campaignFeature",
+      "effects": [],
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>An army that takes damage from a Wyvern Flight’s melee strike increases its @UUID[Compendium.pf2e.kingmaker-features.Item.dmzpRlOrorEFUETl]{Weary} condition value by 1. If this would cause an army to increase its weary condition above 4, it instead takes 1 point of damage.</p>\n<p>Each time an army regains Hit Points during a battle, it can attempt a @Check[type:flat|DC:11]{DC 11 Flat Check}; on a success, it no longer suffers the ongoing effects of Wyvern Venom (but can still be affected by it later from a future attack, and does not reset its weary condition). The effects of Wyvern Venom also end as soon as an army escapes the battlefield or once the battle ends.</p>"
+        },
+        "rules": [],
+        "slug": null,
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "1",
+        "level": {
+          "value": 12
+        }
+      },
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "sort": 200000,
+      "flags": {
+        "core": {}
+      },
+      "_stats": {
+        "compendiumSource": "Item.FG2BifRmaZ54fxhS",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "NIOdavTEHCo3wpRC",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "jZWW6y5VjVRbbU7t",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Wyvern Tactics",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The Wyvern Flight can use the @UUID[Compendium.pf2e.kingmaker-features.Item.Z6jMZgAxI1zRO7Sl]{All-Out Assault} and @UUID[Compendium.pf2e.kingmaker-features.Item.8wjiF3ctXUjP9oyX]{Counterattack} tactical actions.</p>"
+        },
+        "rules": [
+          {
+            "key": "GrantItem",
+            "uuid": "Compendium.pf2e.kingmaker-features.Item.Z6jMZgAxI1zRO7Sl",
+            "flag": "allOutAssault"
+          },
+          {
+            "key": "GrantItem",
+            "uuid": "Compendium.pf2e.kingmaker-features.Item.8wjiF3ctXUjP9oyX",
+            "flag": "counterattack"
+          }
+        ],
+        "slug": "darkvision",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": []
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": "2",
+        "level": {
+          "value": 12
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {},
+        "pf2e": {
+          "itemGrants": {
+            "allOutAssault": {
+              "id": "j6MA4necWTNznnJ6",
+              "onDelete": "detach"
+            },
+            "counterattack": {
+              "id": "F9OTvJKp0WMVee5M",
+              "onDelete": "detach"
+            }
+          }
+        }
+      },
+      "effects": [],
+      "sort": 300000,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.y1JGtzGmMtVh5USK",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "0WhMYXnSoIuLZPsd",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "i18YzT3zo3skuWng",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "name": "All-Out Assault",
+      "system": {
+        "description": {
+          "value": "",
+          "gm": ""
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": null,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "campaign": "kingmaker",
+        "category": "kingdom-activity",
+        "level": {
+          "value": 1
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {},
+        "pf2e": {
+          "grantedBy": {
+            "id": "0WhMYXnSoIuLZPsd",
+            "onDelete": "cascade"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.Z6jMZgAxI1zRO7Sl",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "j6MA4necWTNznnJ6",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "i18YzT3zo3skuWng",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "name": "Counterattack",
+      "system": {
+        "description": {
+          "value": "",
+          "gm": ""
+        },
+        "publication": {
+          "title": "",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "rules": [],
+        "slug": null,
+        "traits": {
+          "value": [],
+          "otherTags": []
+        },
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": null,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "campaign": "kingmaker",
+        "category": "kingdom-activity",
+        "level": {
+          "value": 1
+        },
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {},
+        "pf2e": {
+          "grantedBy": {
+            "id": "0WhMYXnSoIuLZPsd",
+            "onDelete": "cascade"
+          }
+        }
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.8wjiF3ctXUjP9oyX",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "F9OTvJKp0WMVee5M",
+      "ownership": {
+        "default": 0
+      }
+    },
+    {
+      "folder": "e185cDQaLjU3uZ62",
+      "img": "icons/sundries/books/book-red-exclamation.webp",
+      "name": "Darkvision",
+      "system": {
+        "description": {
+          "gm": "",
+          "value": "<p>The army includes several spotters and scouts who have darkvision, and the rest of the soldiers have been trained to follow their lead so that the army itself functions as if it had darkvision.</p>"
+        },
+        "rules": [],
+        "slug": "darkvision",
+        "_migration": {
+          "version": 0.953,
+          "previous": {
+            "schema": 0.926,
+            "foundry": "13.351",
+            "system": "7.7.3"
+          }
+        },
+        "traits": {
+          "otherTags": [],
+          "value": [
+            "cavalry",
+            "infantry",
+            "siege",
+            "skirmisher"
+          ]
+        },
+        "publication": {
+          "title": "Pathfinder Kingmaker",
+          "authors": "",
+          "license": "OGL",
+          "remaster": false
+        },
+        "campaign": "kingmaker",
+        "category": "army-tactic",
+        "actionType": {
+          "value": "passive"
+        },
+        "actions": {
+          "value": null
+        },
+        "prerequisites": {
+          "value": []
+        },
+        "location": null,
+        "level": {
+          "value": 1
+        }
+      },
+      "type": "campaignFeature",
+      "flags": {
+        "core": {}
+      },
+      "effects": [],
+      "sort": 0,
+      "_stats": {
+        "compendiumSource": "Compendium.pf2e.kingmaker-features.Item.y1JGtzGmMtVh5USK",
+        "duplicateSource": null,
+        "exportSource": null,
+        "coreVersion": "13.351",
+        "systemId": "pf2e",
+        "systemVersion": "7.7.3",
+        "lastModifiedBy": null
+      },
+      "_id": "FuKuiqxcwZyfmotw",
+      "ownership": {
+        "default": 0
+      }
+    }
+  ],
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": "Compendium.pf2e.kingmaker-bestiary.Actor.B9FuY1XYxU5SOcuI",
+    "duplicateSource": null,
+    "exportSource": {
+      "worldId": "testmaker",
+      "uuid": "Actor.B9FuY1XYxU5SOcuI",
+      "coreVersion": "13.351",
+      "systemId": "pf2e",
+      "systemVersion": "7.8.0"
+    },
+    "coreVersion": "13.351",
+    "systemId": "pf2e",
+    "systemVersion": "7.7.3",
+    "createdTime": 1763405998845,
+    "modifiedTime": 1763405998845,
+    "lastModifiedBy": "cbiFlE01TKN2dJI4"
+  },
+  "ownership": {
+    "default": 0
+  }
+}

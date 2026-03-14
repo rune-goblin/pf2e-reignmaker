@@ -1,0 +1,112 @@
+{
+  "name": "Lizardfolk Defenders",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 5 },
+      "dex": { "mod": 4 },
+      "con": { "mod": 5 },
+      "int": { "mod": 2 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 2 }
+    },
+    "attributes": {
+      "ac": { "value": 22 },
+      "hp": { "max": 94, "value": 94, "details": "Thresholds 62 (12 squares), 31 (8 squares)" },
+      "speed": { "value": 25, "otherSpeeds": [{ "type": "swim", "value": 25 }], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 5 },
+        { "type": "splash-damage", "value": 4 }
+      ]
+    },
+    "details": {
+      "level": { "value": 5 },
+      "publicNotes": "<p>Disciplined lizardfolk warriors who excel at defending swampy territories and can sustain themselves without supply lines.</p>",
+      "languages": { "value": ["common", "iruxi"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 15 },
+      "reflex": { "value": 12 },
+      "will": { "value": 12 }
+    },
+    "perception": { "mod": 12 },
+    "traits": {
+      "value": ["troop", "humanoid", "lizardfolk"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "live-off-the-land" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 62 (12 squares), 31 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Swamp Stride",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The Lizardfolk Defenders ignore difficult terrain caused by swamps, bogs, or water. They can also breathe underwater.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Aquatic Ambush",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/OneAction.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 1 },
+        "category": "offensive",
+        "description": { "value": "<p>If the Lizardfolk Defenders are in swamp or water terrain and hidden, they can Stride up to their Speed toward an enemy and remain hidden until after their next Strike.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Lizardfolk Defenders",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.5,
+        "damageBenchmark": 0.5,
+        "damageType": "slashing"
+      }
+    }
+  }
+}

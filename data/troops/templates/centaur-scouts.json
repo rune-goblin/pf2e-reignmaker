@@ -1,0 +1,100 @@
+{
+  "name": "Centaur Scouts",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 6 },
+      "dex": { "mod": 6 },
+      "con": { "mod": 6 },
+      "int": { "mod": 4 },
+      "wis": { "mod": 6 },
+      "cha": { "mod": 4 }
+    },
+    "attributes": {
+      "ac": { "value": 27 },
+      "hp": { "max": 143, "value": 143, "details": "Thresholds 95 (12 squares), 47 (8 squares)" },
+      "speed": { "value": 45, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 7 },
+        { "type": "splash-damage", "value": 5 }
+      ]
+    },
+    "details": {
+      "level": { "value": 8 },
+      "publicNotes": "<p>Elite centaur cavalry, self-sufficient warriors who can sustain extended campaigns without supply lines.</p>",
+      "languages": { "value": ["common", "sylvan"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 19 },
+      "reflex": { "value": 19 },
+      "will": { "value": 16 }
+    },
+    "perception": { "mod": 16 },
+    "traits": {
+      "value": ["troop", "humanoid", "centaur"],
+      "rarity": "uncommon",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "live-off-the-land" },
+    { "$ref": "trample" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 95 (12 squares), 47 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Plains Hunter",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "interaction",
+        "description": { "value": "<p>The Centaur Scouts gain a +2 circumstance bonus to Stealth and Survival checks in plains and grassland terrain.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Centaur Scouts",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "cavalry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Lance Charge",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.5,
+        "damageType": "piercing"
+      }
+    }
+  }
+}

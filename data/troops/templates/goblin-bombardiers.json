@@ -1,0 +1,126 @@
+{
+  "name": "Goblin Bombardiers",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 4 },
+      "dex": { "mod": 6 },
+      "con": { "mod": 4 },
+      "int": { "mod": 6 },
+      "wis": { "mod": 2 },
+      "cha": { "mod": 4 }
+    },
+    "attributes": {
+      "ac": { "value": 24 },
+      "hp": { "max": 115, "value": 115, "details": "Thresholds 76 (12 squares), 38 (8 squares)" },
+      "speed": { "value": 25, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 6 },
+        { "type": "splash-damage", "value": 5 }
+      ]
+    },
+    "details": {
+      "level": { "value": 7 },
+      "publicNotes": "<p>Goblin siege specialists who combine alchemical expertise with reckless abandon, manning volatile war machines.</p>",
+      "languages": { "value": ["common", "goblin"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 15 },
+      "reflex": { "value": 18 },
+      "will": { "value": 12 }
+    },
+    "perception": { "mod": 15, "senses": [{ "type": "darkvision" }] },
+    "traits": {
+      "value": ["troop", "humanoid", "goblin"],
+      "rarity": "rare",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "darkvision" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 76 (12 squares), 38 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Alchemical Bombardment",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/TwoActions.webp",
+      "system": {
+        "actionType": { "value": "action" },
+        "actions": { "value": 2 },
+        "category": "offensive",
+        "description": { "value": "<p>The bombardiers launch explosive alchemical munitions at a point within 150 feet. All creatures in a 15-foot burst take fire damage with a basic Reflex save. This attack can damage fortifications.</p>" },
+        "traits": { "value": ["ranged", "fire"] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Desperate Melee",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>Unlike standard siege engines, the Goblin Bombardiers can make melee Strikes while engaged, though they take a -2 penalty to such attacks.</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Explosive Defeat",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Reaction.webp",
+      "system": {
+        "actionType": { "value": "reaction" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p><strong>Trigger</strong> The Goblin Bombardiers are reduced to 0 HP.</p><p><strong>Effect</strong> The remaining munitions detonate. All creatures within 30 feet take fire damage equal to twice the bombardiers' level with a basic Reflex save.</p>" },
+        "traits": { "value": ["fire"] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Goblin Bombardiers",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "siege",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Siege Attack",
+        "attackBenchmark": 0.5,
+        "damageBenchmark": 0.75,
+        "damageType": "fire",
+        "isRanged": true
+      }
+    }
+  }
+}

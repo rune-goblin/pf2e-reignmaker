@@ -1,0 +1,86 @@
+{
+  "type": "support",
+  "family": "Food Storage",
+  "description": "Preserve agricultural surplus",
+  "tiers": [
+    {
+      "id": "granary",
+      "name": "Granary",
+      "description": "Basic grain storage facility",
+      "cost": {
+        "lumber": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "foodCapacity",
+          "value": 4,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "storehouses",
+      "name": "Storehouses",
+      "description": "Multiple storage buildings for food preservation",
+      "cost": {
+        "lumber": 3,
+        "stone": 3
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "foodCapacity",
+          "value": 8,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "warehouses",
+      "name": "Warehouses",
+      "description": "Large-scale storage facilities with climate control",
+      "cost": {
+        "lumber": 4,
+        "stone": 4,
+        "ore": 4
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "foodCapacity",
+          "value": 16,
+          "duration": "permanent"
+        }
+      ]
+    },
+    {
+      "id": "strategic-reserves",
+      "name": "Strategic Reserves",
+      "description": "Massive storage complex with advanced preservation",
+      "cost": {
+        "lumber": 6,
+        "stone": 9,
+        "ore": 9
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "foodCapacity",
+          "value": 24,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "negateFoodSpoilage",
+          "value": true
+        }
+      ],
+      "manualEffects": [
+        "Once per Kingdom Turn, roll flat check DC 15; on success, negate a spoilage/loss event affecting Food"
+      ]
+    }
+  ]
+}

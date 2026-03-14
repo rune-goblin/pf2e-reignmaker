@@ -1,0 +1,99 @@
+{
+  "type": "support",
+  "family": "Hospitality",
+  "description": "Morale and unrest management",
+  "tiers": [
+    {
+      "id": "open-stage",
+      "name": "Dive Bar",
+      "description": "Rough drinking establishment for frontier folk",
+      "cost": {
+        "lumber": 3
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "unrestReductionBonus",
+          "value": 1
+        }
+      ],
+      "manualEffects": [
+        "PCs in this settlement gain +1 to checks made to reduce Unrest"
+      ]
+    },
+    {
+      "id": "amphitheater",
+      "name": "Public House",
+      "description": "Medieval-style communal drinking hall",
+      "cost": {
+        "lumber": 4,
+        "stone": 2
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "unrestReductionBonus",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "PCs in this settlement gain +2 to checks made to reduce Unrest"
+      ]
+    },
+    {
+      "id": "playhouse",
+      "name": "Respectable Tavern",
+      "description": "Well-maintained establishment serving quality food and drink",
+      "cost": {
+        "lumber": 6,
+        "stone": 4,
+        "ore": 2
+      },
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "unrestReductionBonus",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "PCs in this settlement gain +2 to checks made to reduce Unrest"
+      ]
+    },
+    {
+      "id": "auditorium",
+      "name": "Pleasure Palace",
+      "description": "Luxurious indoor entertainment complex with opulent amenities",
+      "cost": {
+        "lumber": 9,
+        "stone": 9,
+        "ore": 6
+      },
+      "modifiers": [
+        {
+          "type": "static",
+          "resource": "fame",
+          "value": 1,
+          "duration": "permanent"
+        },
+        {
+          "type": "static",
+          "resource": "unrest",
+          "value": -1,
+          "duration": "permanent"
+        }
+      ],
+      "gameEffects": [
+        {
+          "type": "ruleMod",
+          "rule": "unrestReductionBonus",
+          "value": 2
+        }
+      ],
+      "manualEffects": [
+        "At the start of each Kingdom Turn, gain +1 Fame and reduce Unrest by 1",
+        "PCs in this settlement gain +2 to checks made to reduce Unrest"
+      ]
+    }
+  ]
+}

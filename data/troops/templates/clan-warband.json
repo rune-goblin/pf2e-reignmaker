@@ -1,0 +1,101 @@
+{
+  "name": "Clan Warband",
+  "type": "npc",
+  "img": "systems/pf2e/icons/default-icons/npc.svg",
+  "system": {
+    "abilities": {
+      "str": { "mod": 7 },
+      "dex": { "mod": 5 },
+      "con": { "mod": 7 },
+      "int": { "mod": 3 },
+      "wis": { "mod": 5 },
+      "cha": { "mod": 5 }
+    },
+    "attributes": {
+      "ac": { "value": 29 },
+      "hp": { "max": 198, "value": 198, "details": "Thresholds 132 (12 squares), 66 (8 squares)" },
+      "speed": { "value": 30, "otherSpeeds": [], "details": "troop movement" },
+      "immunities": [
+        { "type": "death-effects" },
+        { "type": "disease" },
+        { "type": "paralyzed" },
+        { "type": "poison" },
+        { "type": "unconscious" }
+      ],
+      "weaknesses": [
+        { "type": "area-damage", "value": 8 },
+        { "type": "splash-damage", "value": 6 }
+      ]
+    },
+    "details": {
+      "level": { "value": 10 },
+      "publicNotes": "<p>Hardy warriors from various clans, self-sufficient and merciless in battle. They can sustain themselves from the land and are difficult to escape from.</p>",
+      "languages": { "value": ["common"], "details": "" },
+      "publication": { "title": "ReignMaker", "authors": "pf2e-reignmaker" }
+    },
+    "saves": {
+      "fortitude": { "value": 22 },
+      "reflex": { "value": 19 },
+      "will": { "value": 19 }
+    },
+    "perception": { "mod": 19 },
+    "traits": {
+      "value": ["troop", "humanoid"],
+      "rarity": "common",
+      "size": { "value": "grg" }
+    }
+  },
+  "items": [
+    { "$ref": "form-up" },
+    { "$ref": "troop-movement" },
+    { "$ref": "live-off-the-land" },
+    { "$ref": "toughened-soldiers" },
+    { "$ref": "all-out-assault" },
+    {
+      "_inline": true,
+      "name": "Troop Defenses",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "defensive",
+        "description": { "value": "<p><strong>Thresholds</strong> 132 (12 squares), 66 (8 squares)</p>" },
+        "traits": { "value": [] }
+      }
+    },
+    {
+      "_inline": true,
+      "name": "Merciless",
+      "type": "action",
+      "img": "systems/pf2e/icons/actions/Passive.webp",
+      "system": {
+        "actionType": { "value": "passive" },
+        "actions": { "value": null },
+        "category": "offensive",
+        "description": { "value": "<p>The warband is difficult to escape from. Their Mobility DC gains a +2 status bonus when other armies attempt to Disengage from them.</p>" },
+        "traits": { "value": [] }
+      }
+    }
+  ],
+  "prototypeToken": {
+    "name": "Clan Warband",
+    "width": 4,
+    "height": 4,
+    "displayName": 30,
+    "actorLink": true,
+    "texture": { "src": "systems/pf2e/icons/default-icons/npc.svg" }
+  },
+  "flags": {
+    "pf2e-reignmaker": {
+      "armyType": "infantry",
+      "troopSize": "gargantuan",
+      "strikeData": {
+        "name": "Melee Strike",
+        "attackBenchmark": 0.75,
+        "damageBenchmark": 0.75,
+        "damageType": "slashing"
+      }
+    }
+  }
+}
