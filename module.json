@@ -2,7 +2,7 @@
   "id": "pf2e-reignmaker",
   "title": "PF2E ReignMaker",
   "description": "Kingdom Building management for Pathfinder 2e",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "esmodules": [
     "dist/pf2e-reignmaker.js"
   ],
