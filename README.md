@@ -4,4 +4,10 @@
 
 Kingdom Building module for Foundry VTT / Pathfinder 2e.
 
-Install via Foundry's module installer using the manifest URL from the latest release.
+## Install
+
+Paste this manifest URL into Foundry's module installer:
+
+```
+https://github.com/rune-goblin/pf2e-reignmaker/releases/latest/download/module.json
+```
